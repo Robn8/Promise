@@ -1,5 +1,6 @@
 import Header from "./Components/Header";
 import Nav from "./Components/Nav";
+import MissionBox from "./Components/MissionBox";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div class="min-h-screen">
         <Header />
         <Nav />
+        <MissionBox />
       </div>
     </>
   )
