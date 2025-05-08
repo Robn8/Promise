@@ -2,7 +2,7 @@ function MissionBox() {
     return (
         <div>
             <div class="flex flex-col mt-5 items-center">
-                <div class="flex flex-row w-200 h-100">
+                <div class="flex flex-row w-150 h-80">
                 <img class="mt-10 mb-4 w-125" src="pic2.png" alt="Yoke" />
                 <img class="mt-10 mb-4 w-125" src="pic3.png" alt="Yoke" />
                 </div>
