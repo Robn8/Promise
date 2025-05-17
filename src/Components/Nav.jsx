@@ -8,6 +8,7 @@ function Nav() {
           { name: "Home", path: "/" },
           { name: "Resources", path: "/resources" },
           { name: "About Us", path: "/aboutus" },
+          { name: "FAQ", path: "/FAQ" },
           { name: "Contact", path: "/contact" },
         ].map((link) => (
           <NavLink

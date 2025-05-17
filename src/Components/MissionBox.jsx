@@ -1,14 +1,11 @@
 function MissionBox() {
     return (
-        <div>
-            <div class="flex flex-col mt-5 items-center">
-                <div class="flex flex-row w-150 h-80">
-                <img class="mt-10 mb-4 w-125" src="pic2.png" alt="Yoke" />
-                <img class="mt-10 mb-4 w-125" src="pic3.png" alt="Yoke" />
-                </div>
+        <div className="flex justify-center mt-10 ">
+            <div className="flex flex-row w-[900px] h-80 justify-center items-center bg-gray-100 rounded-lg shadow-md">
+
             </div>
         </div>
-    )
+    );
 }
 
 export default MissionBox;
