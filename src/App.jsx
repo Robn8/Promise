@@ -12,9 +12,7 @@ function App() {
         <div className="flex-1">
           <MissionBox />
         </div>
-        <div className="flex-1">
-          <Mission />
-        </div>
+        
       </div>
     </div>
   );
