@@ -17,8 +17,8 @@ function MissionBox() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
         setFade(true); // Fade in new image
-      }, 3000); // Match this to the fade-out duration
-    }, 4000);
+      }, 2000); // Match this to the fade-out duration
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
