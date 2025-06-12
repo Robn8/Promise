@@ -9,7 +9,7 @@ function Nav() {
           { name: "Resources", path: "/resources" },
           { name: "About Us", path: "/aboutus" },
           { name: "FAQ", path: "/FAQ" },
-          { name: "Contact", path: "/contact" },
+          { name: "Types Of Care", path: "/contact" },
         ].map((link) => (
           <NavLink
             key={link.path}
