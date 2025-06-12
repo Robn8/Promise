@@ -33,7 +33,7 @@ function MissionBox() {
       <div className="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
 
       {/* Card Content */}
-      <div className="relative z-10 mt-15 flex flex-row w-[825px] h-[425px] rounded-lg shadow-md overflow-hidden">
+      <div className="relative z-10 mt-15 flex flex-row w-[800px] h-[425px] rounded-lg shadow-md overflow-hidden">
         {/* Image Slider Area */}
         <div className="flex-2 relative w-full h-full">
           {sliderImages.map((img, index) => (
