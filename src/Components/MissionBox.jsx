@@ -49,7 +49,7 @@ function MissionBox() {
 
         {/* Static Right Side */}
         <div className="flex-1">
-          <img src="pic3.png" alt="Image 2" className="w-[100] h-full" />
+          <img src="pic3.png" alt="Image 2" className="w-full h-full" />
         </div>
       </div>
     </div>
