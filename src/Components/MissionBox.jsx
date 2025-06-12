@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 const sliderImages = [
   '/IMG_2494.jpg',  
   '/pic9.jpeg',
+  '/yoke.jpeg',
   '/pic7.png',
   '/pic4.jpg'
 ];
