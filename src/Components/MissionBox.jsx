@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 const sliderImages = [
-  '/pic1.png',
-  '/pic2.png',
-  '/pic3.png',
+  '/IMG_2494.jpg',  
+  '/pic9.jpeg',
+  '/pic7.png',
   '/pic4.jpg'
 ];
 
@@ -32,7 +32,7 @@ function MissionBox() {
       <div className="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
 
       {/* Card Content */}
-      <div className="relative z-10 mt-15 flex flex-row w-[900px] h-[425px] rounded-lg shadow-md overflow-hidden">
+      <div className="relative z-10 mt-15 flex flex-row w-[825px] h-[425px] rounded-lg shadow-md overflow-hidden">
         {/* Image Slider Area */}
         <div className="flex-2 relative w-full h-full">
           {sliderImages.map((img, index) => (
@@ -40,7 +40,7 @@ function MissionBox() {
               key={index}
               src={img}
               alt={`Slider ${index}`}
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-5000 ease-in-out ${
+              className={`absolute inset-0 w-full h-full object-center transition-opacity duration-5000 ease-in-out ${
                 index === currentIndex && fade ? 'opacity-100' : 'opacity-0'
               }`}
             />
@@ -49,7 +49,7 @@ function MissionBox() {
 
         {/* Static Right Side */}
         <div className="flex-1">
-          <img src="pic3.png" alt="Image 2" className="w-80 h-full" />
+          <img src="pic3.png" alt="Image 2" className="w-[100] h-full" />
         </div>
       </div>
     </div>
