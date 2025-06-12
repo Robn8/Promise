@@ -5,6 +5,7 @@ const sliderImages = [
   '/pic9.jpeg',
   '/yoke.jpeg',
   '/pic7.png',
+  '/guitar.jpg',
   '/pic4.jpg'
 ];
 
