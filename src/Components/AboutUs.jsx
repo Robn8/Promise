@@ -1,6 +1,6 @@
 function AboutUs() {
     return (
-      <div className="px-4 py-10 max-w-6xl mx-auto">
+      <div className="px-4 py-8 max-w-6xl mx-auto">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-12 text-blue-600">Our Story</h1>
   

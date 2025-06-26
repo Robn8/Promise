@@ -4,6 +4,7 @@ import Nav from "./Components/Nav";
 import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
 import Resources from "./Components/Resources";
+import FAQ from "./Components/FAQ";
 // import other pages as needed
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<MissionBox />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* Add more pages like this */}
         </Routes>
       </div>

@@ -1,6 +1,6 @@
 function Resources() {
     return (
-      <div className="px-4 py-10 max-w-6xl mx-auto">
+      <div className="px-4 py-8 max-w-6xl mx-auto">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-12 text-blue-600">Equipment</h1>
   
@@ -34,7 +34,7 @@ function Resources() {
   
           {/* Left: Text */}
           <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
-          <h1 className="text-4xl underline font-bold text-center mb-8 text-blue-600">Thrift Stores</h1>
+          <h1 className="text-4xl underline font-bold text-center mb-8 text-blue-600">Thrift Store Equipment</h1>
             <p>
               {/* Placeholder text – replace this with your actual story */}
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
