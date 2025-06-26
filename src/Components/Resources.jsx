@@ -50,7 +50,7 @@ function Resources() {
   
         {/* === Caregivers Section === */}
         <section id="care">
-          <h1 className="text-4xl font-bold underline text-center mb-12 text-blue-600">Caregivers</h1>
+          <h1 className="text-4xl font-bold underline text-center mb-10 text-blue-600">Caregivers</h1>
   
           <div className="flex flex-col items-center gap-8">
             <div className="w-full md:w-[700px] text-lg text-gray-700 leading-relaxed">
@@ -59,6 +59,31 @@ function Resources() {
                 <img
                   src="/table3.png"
                   alt="Caregivers"
+                  className="rounded-lg shadow-lg w-full object-cover"
+                />
+              </div>
+  
+              {/* Text */}
+              <p className="mt-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+                Cras venenatis euismod malesuada. Mauris ut consequat erat. Duis vehicula, libero eget fermentum interdum,
+                nunc neque pellentesque massa, a sagittis libero dolor in risus.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* === Support Groups Section === */}
+        <section id="support-groups">
+          <h1 className="text-4xl font-bold underline text-center mb-10 text-blue-600">Support Groups</h1>
+  
+          <div className="flex flex-col items-center gap-8">
+            <div className="w-full md:w-[700px] text-lg text-gray-700 leading-relaxed">
+              {/* Image */}
+              <div className="w-full">
+                <img
+                  src="/table4.png"
+                  alt="Support Groups"
                   className="rounded-lg shadow-lg w-full object-cover"
                 />
               </div>

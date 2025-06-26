@@ -16,7 +16,7 @@ function Nav() {
   const resourceSubLinks = [
     { name: "Equipment", path: "/resources#equipment" },
     { name: "Caregivers", path: "/resources#care" },
-    { name: "Support Groups", path: "/resources/support-groups" },
+    { name: "Support Groups", path: "/resources#support-groups" },
     { name: "Videos", path: "/resources/videos" },
   ];
 
