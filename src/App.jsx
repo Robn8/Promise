@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Nav from "./Components/Nav";
 import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
+import Resources from "./Components/Resources";
 // import other pages as needed
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MissionBox />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/resources" element={<Resources />} />
           {/* Add more pages like this */}
         </Routes>
       </div>
