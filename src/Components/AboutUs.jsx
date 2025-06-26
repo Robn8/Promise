@@ -9,7 +9,7 @@ function AboutUs() {
           {/* Left: Image */}
           <div className="w-full md:w-1/2">
             <img
-              src="/about.jpg" // replace this path with your actual image path
+              src="/fam.jpg" // replace this path with your actual image path
               alt="Our Story"
               className="rounded-lg shadow-lg w-full object-cover"
             />
@@ -31,9 +31,7 @@ function AboutUs() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
               Cras venenatis euismod malesuada. Mauris ut consequat erat. Duis vehicula, libero eget fermentum interdum,
               nunc neque pellentesque massa, a sagittis libero dolor in risus.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
-              Cras venenatis euismod malesuada. Mauris ut consequat erat. Duis vehicula, libero eget fermentum interdum,
-              nunc neque pellentesque massa, a sagittis libero dolor in risus.
+              L
             </p>
           </div>
         </div>
