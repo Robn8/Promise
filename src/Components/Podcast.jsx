@@ -25,7 +25,7 @@ function Podcast() {
     return (
       <div className="bg-gray-50 min-h-screen">
         <Hero 
-            title="🎙️ Our Podcast"
+            title="🎙️ Promise Podcast"
             subtitle="Stories, advice, and expert insights on caregiving, elder support, and healthcare topics."
             bgClass="bg-blue-600"
             textClass="text-white"

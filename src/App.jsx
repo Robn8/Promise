@@ -6,6 +6,7 @@ import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
 import Resources from "./Components/Resources";
 import FAQ from "./Components/FAQ";
+import TypesOfCare from "./Components/TypesOfCare";
 import Podcast from "./Components/Podcast";
 // import other pages as needed
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/podcast" element={<Podcast />} />
+          <Route path="/typesofcare" element={<TypesOfCare />} />
           {/* Add more pages like this */}
         </Routes>
       </div>
