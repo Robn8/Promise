@@ -3,7 +3,7 @@ function Resources() {
       <div className="px-4 py-8 max-w-6xl mx-auto space-y-20">
         {/* === Equipment Section === */}
         <section id="equipment">
-          <h1 className="text-4xl font-bold text-center mb-12 underline text-blue-600">Equipment</h1>
+          <h1 className="text-4xl font-bold text-center mb-12  text-blue-600">Equipment</h1>
   
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Left: Image */}
@@ -17,7 +17,6 @@ function Resources() {
   
             {/* Right: Text */}
             <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
-              <h2 className="text-3xl font-bold text-center mb-6 text-blue-500">Medical Equipment</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
                 Cras venenatis euismod malesuada. Mauris ut consequat erat. Duis vehicula, libero eget fermentum interdum,
@@ -29,7 +28,6 @@ function Resources() {
           <div className="flex flex-col md:flex-row items-center gap-8 mt-16">
             {/* Left: Text */}
             <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
-              <h2 className="text-3xl font-bold text-center mb-6 text-blue-500">Thrift Store Equipment</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
                 Cras venenatis euismod malesuada. Mauris ut consequat erat. Duis vehicula, libero eget fermentum interdum,

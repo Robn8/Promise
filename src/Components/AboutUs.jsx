@@ -2,7 +2,7 @@ function AboutUs() {
     return (
       <div className="px-4 py-8 max-w-6xl mx-auto">
         {/* Header */}
-        <h1 className="text-4xl font-bold text-center mb-12 text-blue-600">Our Story</h1>
+        <h1 className="text-4xl  font-bold text-center mb-12 text-blue-600">Our Story</h1>
   
         {/* Content Section */}
         <div className="flex flex-col md:flex-row items-center gap-8">

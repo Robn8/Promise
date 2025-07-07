@@ -6,6 +6,7 @@ import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
 import Resources from "./Components/Resources";
 import FAQ from "./Components/FAQ";
+import Podcast from "./Components/Podcast";
 // import other pages as needed
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/podcast" element={<Podcast />} />
           {/* Add more pages like this */}
         </Routes>
       </div>

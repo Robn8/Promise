@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; // Optional: for nice icons
+import { ChevronDown, ChevronUp } from "lucide-react";
+import Hero from "./Hero";
 
 function FAQ() {
   const faqs = [
@@ -32,35 +33,49 @@ function FAQ() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-blue-600 text-center mb-10">Frequently Asked Questions</h1>
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className="bg-white border rounded-lg shadow-md transition-all duration-300"
-          >
-            <button
-              className="w-full flex justify-between items-center px-6 py-4 focus:outline-none"
-              onClick={() => toggle(index)}
-            >
-              <span className="text-lg font-medium text-left text-gray-800">{faq.question}</span>
-              {openIndex === index ? (
-                <ChevronUp className="w-5 h-5 text-blue-500" />
-              ) : (
-                <ChevronDown className="w-5 h-5 text-gray-500" />
-              )}
-            </button>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero section (full-width) */}
+      <Hero
+        title="Frequently Asked Questions"
+        subtitle="Get quick answers to the most common inquiries from our community."
+        bgClass="bg-blue-600"
+        textClass="text-white"
+      />
+
+      {/* FAQ Content */}
+      <section className="max-w-4xl mx-auto px-4 py-16">
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
             <div
-              className={`px-6 pb-4 text-gray-600 text-sm transition-all duration-300 ${
-                openIndex === index ? "block" : "hidden"
-              }`}
+              key={index}
+              className="bg-white border rounded-lg shadow-md overflow-hidden"
             >
-              {faq.answer}
+              <button
+                className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
+                onClick={() => toggle(index)}
+              >
+                <span className="text-lg font-medium text-gray-800">
+                  {faq.question}
+                </span>
+                {openIndex === index ? (
+                  <ChevronUp className="w-5 h-5 text-blue-500" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 text-gray-500" />
+                )}
+              </button>
+
+              {/* Animated answer area */}
+              <div
+                className={`px-6 pb-4 text-gray-600 text-sm transition-all duration-300 ${
+                  openIndex === index ? "block" : "hidden"
+                }`}
+              >
+                {faq.answer}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
