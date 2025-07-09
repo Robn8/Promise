@@ -34,6 +34,9 @@ function MissionBox() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
+      
+
+
       {/* Content Card */}
       <div className="relative z-10 flex w-full max-w-5xl h-[450px] bg-white/80 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md border border-white/30">
         

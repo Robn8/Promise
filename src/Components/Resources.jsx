@@ -11,47 +11,70 @@ function Resources() {
         textClass="text-white"
       />
 
-      <div className="max-w-6xl mx-auto px-4 py-16 space-y-32">
-        {/* === Equipment Section === */}
-        <section id="equipment" className="space-y-16">
-          <h2 className="text-4xl font-bold text-center text-blue-600">Medical Equipment</h2>
+      <div className="max-w-6xl mx-auto px-4 space-y-32">
+        {/* Medical Equipment Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+              Medical Equipment
+            </h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="w-full md:w-1/2">
-              <img
-                src="/table1.png"
-                alt="Medical Equipment"
-                className="rounded-lg shadow-lg w-full object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Access to durable medical equipment can make caregiving easier and safer. We provide recommendations for beds,
-                wheelchairs, walkers, and other tools that support mobility, comfort, and independence at home.
-              </p>
-            </div>
-          </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {/* Free */}
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-3">Free</h3>
+                  <p className="text-gray-600 mb-6">
+                    Discover places and programs that offer medical equipment at no cost to caregivers and patients.
+                  </p>
+                </div>
+                <a
+                  href="/equipment/free"
+                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+                >
+                  Learn More
+                </a>
+              </div>
 
-          <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-            <div className="w-full md:w-1/2">
-              <img
-                src="/table2.png"
-                alt="Thrift Store Equipment"
-                className="rounded-lg shadow-lg w-full object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
-              <p>
-                You can often find affordable or even free equipment through local thrift stores, nonprofits, and lending
-                libraries. These resources help reduce the financial burden for families caring for loved ones.
-              </p>
+              {/* Thrift Stores */}
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                <div>
+                  <h3 className="text-xl font-semibold text-green-700 mb-3">Thrift Stores</h3>
+                  <p className="text-gray-600 mb-6">
+                    Browse local thrift stores where affordable or gently-used medical equipment may be available.
+                  </p>
+                </div>
+                <a
+                  href="/equipment/thrift"
+                  className="mt-auto inline-block px-4 py-2 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition"
+                >
+                  Learn More
+                </a>
+              </div>
+
+              {/* Misc. */}
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                <div>
+                  <h3 className="text-xl font-semibold text-purple-700 mb-3">Misc.</h3>
+                  <p className="text-gray-600 mb-6">
+                    Explore various other resources, tools, or services that don't quite fit the other categories.
+                  </p>
+                </div>
+                <a
+                  href="/equipment/misc"
+                  className="mt-auto inline-block px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
+
         {/* === Caregivers Section === */}
         <section id="care" className="space-y-12">
-          <h2 className="text-4xl font-bold text-center text-blue-600">Caregiver Support</h2>
+          <h2 className="text-4xl font-bold text-center text-blue-700">Caregiver Support</h2>
 
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="w-full md:w-1/2">
@@ -74,7 +97,7 @@ function Resources() {
         <section id="support-groups" className="space-y-12">
           <h2 className="text-4xl font-bold text-center text-blue-600">Support Groups</h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="flex flex-col md:flex-row items-center mb-20 gap-10">
             <div className="w-full md:w-1/2">
               <img
                 src="/table4.png"
