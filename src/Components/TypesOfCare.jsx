@@ -31,26 +31,12 @@ function TypesOfCare() {
             </p>
           </div>
 
-          {/* Image */}
-          <div className="w-full md:w-1/2">
-            <img
-              src="/palliative-care.jpg" // Replace with your actual image
-              alt="Palliative Care"
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
-            />
-          </div>
+          
         </div>
 
         {/* Hospice Care Section */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-          {/* Image */}
-          <div className="w-full md:w-1/2">
-            <img
-              src="/hospice-care.jpg" // Replace with your actual image
-              alt="Hospice Care"
-              className="rounded-lg shadow-lg w-full h-auto object-cover"
-            />
-          </div>
+          
 
           {/* Text Content */}
           <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const sliderImages = [
-  '/IMG_2494.jpg',  
+  '/IMG_2494.jpg',
   '/pic9.jpeg',
   '/yoke.jpeg',
   '/pic7.png',
@@ -15,11 +15,11 @@ function MissionBox() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // Start fade out
+      setFade(false);
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
-        setFade(true); // Fade in new image
-      }, 2000); // Match this to the fade-out duration
+        setFade(true);
+      }, 1000);
     }, 8000);
 
     return () => clearInterval(interval);
@@ -27,31 +27,37 @@ function MissionBox() {
 
   return (
     <div
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center pt-10"
+      className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat px-4 py-20"
       style={{ backgroundImage: `url('/pic2.png')` }}
     >
+      
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/25 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-      {/* Card Content */}
-      <div className="relative z-10 mt-15 flex flex-row w-[800px] h-[425px] rounded-lg shadow-md overflow-hidden">
-        {/* Image Slider Area */}
-        <div className="flex-2 relative w-full h-full">
+      {/* Content Card */}
+      <div className="relative z-10 flex w-full max-w-5xl h-[450px] bg-white/80 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md border border-white/30">
+        
+        {/* Image Slider - LEFT (Flexible width) */}
+        <div className="relative flex-1 h-full">
           {sliderImages.map((img, index) => (
             <img
               key={index}
               src={img}
               alt={`Slider ${index}`}
-              className={`absolute inset-0 w-full h-full object-center transition-opacity duration-5000 ease-in-out ${
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                 index === currentIndex && fade ? 'opacity-100' : 'opacity-0'
               }`}
             />
           ))}
         </div>
 
-        {/* Static Right Side */}
-        <div className="flex-1">
-          <img src="pic3.png" alt="Image 2" className="w-full h-full" />
+        {/* Static Image - RIGHT (Fixed 350px) */}
+        <div className="h-full w-[350px] flex-shrink-0">
+          <img
+            src="/pic3.png"
+            alt="Mission"
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
     </div>
