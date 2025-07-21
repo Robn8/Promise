@@ -14,9 +14,9 @@ function TypesOfCare() {
       {/* Main Content */}
       <section className="max-w-6xl mx-auto px-4 py-16 space-y-20">
 
-        <p className="italic text-center text-gray-600 mt-5 mb-20">
-          “To care for those who once cared for us is one of the highest honors in life.” — Tia Walker
-        </p>
+      <p className="italic text-center text-gray-600 mt-6">
+        “To care for those who once cared for us is one of the highest honors in life.” — Tia Walker
+      </p>
 
         {/* Palliative Care */}
         <div className="flex flex-col md:flex-row items-center gap-10">
@@ -90,6 +90,18 @@ function TypesOfCare() {
             <li>Fax referral documents (face sheet, medications, progress notes)</li>
             <li>Intake team reviews info, verifies insurance, and follows up with patient/family</li>
           </ul>
+        </div>
+
+        {/* PDF Download Link */}
+        <div className="text-center mt-20">
+          <a
+            href="public/PalliativeCare.pptx .pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+          >
+            Download Full PDF Presentation
+          </a>
         </div>
       </section>
     </div>
