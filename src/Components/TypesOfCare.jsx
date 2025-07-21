@@ -18,9 +18,11 @@ function TypesOfCare() {
         “To care for those who once cared for us is one of the highest honors in life.” — Tia Walker
       </p>
 
-        {/* Palliative Care */}
+
+        {/* === Palliative Care Section with Image === */}
         <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
+          {/* Left: Text */}
+          <div className="w-full md:w-2/3 text-lg text-gray-700 leading-relaxed">
             <h2 className="text-3xl font-bold text-blue-600 mb-4">Palliative Care</h2>
             <p>
               Palliative care is specialized medical care for people living with serious illnesses. It focuses on providing relief from symptoms, pain, and stress, regardless of the diagnosis or stage of illness.
@@ -39,9 +41,18 @@ function TypesOfCare() {
               <li>Chronic infections, wounds, fatigue, pain</li>
             </ul>
           </div>
+
+          {/* Right: Image */}
+          <div className="w-full h-[600px] md:w-1/4">
+            <img
+              src="/drpic1.svg"
+              alt="Doctor explaining palliative care"
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
 
-        {/* Hospice Care */}
+        {/* === Hospice Care Section === */}
         <div className="flex flex-col-reverse md:flex-row items-center gap-10">
           <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
             <h2 className="text-3xl font-bold text-blue-600 mb-4">Hospice Care</h2>
@@ -61,7 +72,7 @@ function TypesOfCare() {
           </div>
         </div>
 
-        {/* Barriers Section */}
+        {/* === Barriers Section === */}
         <div className="text-lg text-gray-700 leading-relaxed">
           <h2 className="text-3xl font-bold text-blue-600 mb-4">Barriers to Care</h2>
           <p>
@@ -78,7 +89,7 @@ function TypesOfCare() {
           </p>
         </div>
 
-        {/* Referral Process */}
+        {/* === Referral Process === */}
         <div className="text-lg text-gray-700 leading-relaxed">
           <h2 className="text-3xl font-bold text-blue-600 mb-4">Referral Process</h2>
           <p>
@@ -92,7 +103,7 @@ function TypesOfCare() {
           </ul>
         </div>
 
-        {/* PDF Download Link */}
+        {/* === PDF Download Link === */}
         <div className="text-center mt-20">
           <a
             href="public/PalliativeCare.pptx .pdf"
