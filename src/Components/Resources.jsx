@@ -13,7 +13,7 @@ function Resources() {
 
       <div className="max-w-6xl mx-auto px-4 space-y-32">
         {/* Medical Equipment Section */}
-        <section id="equipment" className="py-16 bg-gray-50">
+        <section id="equipment" className="py-10 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
               Medical Equipment
@@ -76,7 +76,7 @@ function Resources() {
         <section id="care" className="space-y-12">
           <h2 className="text-4xl font-bold text-center text-blue-700">Caregiver Support</h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="flex flex-col md:flex-row items-center gap-10 mb-0">
             <div className="w-full md:w-1/2">
               <img
                 src="/table3.png"
@@ -94,10 +94,10 @@ function Resources() {
         </section>
 
         {/* === Support Groups Section === */}
-        <section id="support-groups" className="space-y-12">
+        <section id="support-groups" className="space-y-12 py-20">
           <h2 className="text-4xl font-bold text-center text-blue-600">Support Groups</h2>
 
-          <div className="flex flex-col md:flex-row items-center mb-20 gap-10">
+          <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="w-full md:w-1/2">
               <img
                 src="/table4.png"
@@ -105,7 +105,7 @@ function Resources() {
                 className="rounded-lg shadow-lg w-full object-cover"
               />
             </div>
-            <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
+            <div className="w-full md:w-1/2 text-lg text-gray-700  leading-relaxed">
               <p>
                 You're not alone. Support groups offer a place to share experiences, ask questions, and find strength in
                 community. Whether in-person or virtual, these groups can be a vital resource for caregivers and families alike.
