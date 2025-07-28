@@ -1,9 +1,16 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 function Nav() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const links = [
     { name: "Home", path: "/" },
@@ -22,7 +29,11 @@ function Nav() {
   ];
 
   return (
-    <div className="sticky top-0 z-50 bg-white/70 backdrop-blur-md shadow-md">
+    <div
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Title */}
         <NavLink
@@ -54,17 +65,16 @@ function Nav() {
                   <ChevronDown className="w-4 h-4" />
                 </NavLink>
 
-                {/* Dropdown with smooth animation */}
                 <div
                   className={`absolute left-0 w-44 bg-white border rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-out 
-                  ${showDropdown ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}
+                    ${showDropdown ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}
                 >
                   {resourceSubLinks.map((sublink) => (
                     <NavLink
                       key={sublink.path}
                       to={sublink.path}
                       className="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition"
-                      onClick={() => setShowDropdown(false)} // closes when clicking
+                      onClick={() => setShowDropdown(false)}
                     >
                       {sublink.name}
                     </NavLink>
