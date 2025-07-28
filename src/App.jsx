@@ -13,7 +13,6 @@ import Podcast from "./Components/Podcast";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <Nav />
       <div className="flex-1 px-0 py-0">
         <ScrollToHashElement />
