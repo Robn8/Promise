@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import ScrollToHashElement from "./Components/ScrollToHashElement";
-import Header from "./Components/Header";
+import ScrollToTop from "./Components/ScrollToTop";
 import Nav from "./Components/Nav";
 import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
@@ -13,6 +13,7 @@ import Podcast from "./Components/Podcast";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop />
       <Nav />
       <div className="flex-1 px-0 py-0">
         <ScrollToHashElement />
