@@ -6,6 +6,8 @@ import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
 import Resources from "./Components/Resources";
 import FreeMedicalEquipment from "./Components/FreeMedicalEquipment";
+import ThriftStoreEquipment from "./Components/ThriftStoreEquipment";
+import ForPurchaseEquipment from "./Components/ForPurchaseEquipment";
 import FAQ from "./Components/FAQ";
 import TypesOfCare from "./Components/TypesOfCare";
 import Podcast from "./Components/Podcast";
@@ -23,6 +25,8 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/equipment/free" element={<FreeMedicalEquipment />} />
+          <Route path="/equipment/thrift" element={<ThriftStoreEquipment />} />
+          <Route path="/equipment/purchase" element={<ForPurchaseEquipment />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/typesofcare" element={<TypesOfCare />} />

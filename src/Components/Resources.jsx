@@ -55,13 +55,13 @@ function Resources() {
               {/* Misc. */}
               <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
                 <div>
-                  <h3 className="text-xl font-semibold text-purple-700 mb-3">Misc.</h3>
+                  <h3 className="text-xl font-semibold text-purple-700 mb-3">For Purchase</h3>
                   <p className="text-gray-600 mb-6">
-                    Explore various other resources, tools, or services that don't quite fit the other categories.
+                    Explore various other resources, tools, or services that are available for purchase.
                   </p>
                 </div>
                 <a
-                  href="/equipment/misc"
+                  href="/equipment/purchase"
                   className="mt-auto inline-block px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition"
                 >
                   Learn More
