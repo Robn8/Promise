@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Optional animation in your CSS (or add via Tailwind plugins) */
 @keyframes fadeIn {
@@ -9,3 +12,17 @@
     animation: fadeIn 1s ease-out forwards;
   }
   
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -5,6 +5,7 @@ import Nav from "./Components/Nav";
 import MissionBox from "./Components/MissionBox";
 import AboutUs from "./Components/AboutUs";
 import Resources from "./Components/Resources";
+import FreeMedicalEquipment from "./Components/FreeMedicalEquipment";
 import FAQ from "./Components/FAQ";
 import TypesOfCare from "./Components/TypesOfCare";
 import Podcast from "./Components/Podcast";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<MissionBox />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/equipment/free" element={<FreeMedicalEquipment />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/typesofcare" element={<TypesOfCare />} />
