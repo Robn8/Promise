@@ -28,18 +28,6 @@ function FreeMedicalEquipment() {
       {/* Content Section - Side by Side */}
       <section className="max-w-5xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-10">
         {/* Chart with click-to-enlarge */}
-        
-
-        {/* Description */}
-        <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed animate-fadeIn delay-200">
-          <p>
-            This chart provides an overview of available free medical equipment resources in our area.
-            It highlights programs and donation centers that support caregivers and patients by providing
-            essential medical tools at no cost. These services help reduce the financial burden and ensure 
-            that everyone has access to the equipment they need to provide proper care and improve quality of life.
-          </p>
-        </div>
-
         <div
           className="relative cursor-pointer animate-fadeIn w-full md:w-1/2"
           onClick={() => setShowModal(true)}
@@ -53,9 +41,17 @@ function FreeMedicalEquipment() {
             Click chart to enlarge
           </p>
         </div>
-      </section>
 
-      
+        {/* Description */}
+        <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed animate-fadeIn delay-200">
+          <p>
+            This chart provides an overview of available free medical equipment resources in our area.
+            It highlights programs and donation centers that support caregivers and patients by providing
+            essential medical tools at no cost. These services help reduce the financial burden and ensure 
+            that everyone has access to the equipment they need to provide proper care and improve quality of life.
+          </p>
+        </div>
+      </section>
 
       {/* Lightbox Modal */}
       {showModal && (
