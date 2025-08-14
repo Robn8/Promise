@@ -33,7 +33,7 @@ function AboutUs() {
             </blockquote>
 
             <p>
-              It began with a final, peaceful text from our dad—the same day he fell and broke his hip.
+              It began with a final, peaceful text from our dad on the same day he fell and broke his hip.
               Isolated by COVID-19 policies, we couldn’t be with him. 
               We were reduced to window visits, phone calls, and the heartache of trusting others to care for him as we would have.
             </p>
