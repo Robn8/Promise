@@ -28,7 +28,7 @@ function MissionBox() {
   return (
     <div
       className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat px-4 py-20"
-      style={{ backgroundImage: `url('/pic2.png')` }}
+      style={{ backgroundImage: `url('/hand1.jpg')` }}
     >
       
       {/* Overlay */}

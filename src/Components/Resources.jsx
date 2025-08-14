@@ -15,7 +15,7 @@ function Resources() {
         {/* Medical Equipment Section */}
         <section id="equipment" className="py-10 bg-gray-50">
           <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
               Medical Equipment
             </h2>
 
