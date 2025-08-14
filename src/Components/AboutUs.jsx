@@ -26,6 +26,12 @@ function AboutUs() {
 
           {/* Text */}
           <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed font-light">
+            
+            {/* Opening Quote */}
+            <blockquote className="text-2xl italic font-semibold text-blue-600 mb-8 border-l-4 border-blue-400 pl-4">
+              “Happy Sunday morning, let’s hope it's a peaceful day. ❤️❤️ Love, Dad”
+            </blockquote>
+
             <p>
               It began with a final, peaceful text from our dad—the same day he fell and broke his hip.
               Isolated by COVID-19 policies, we couldn’t be with him. 
