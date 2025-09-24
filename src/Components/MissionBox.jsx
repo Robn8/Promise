@@ -26,7 +26,7 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/hand1.jpg')"}}>
       {/* Hero Title */}
       <div className="text-center py-12">
         <h1 className="text-4xl md:text-6xl font-extrabold text-blue-600 tracking-wide drop-shadow-sm">
