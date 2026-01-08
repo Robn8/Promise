@@ -37,7 +37,7 @@ function FAQ() {
       {/* Hero section (full-width) */}
       <Hero
         title="Frequently Asked Questions"
-        subtitle="Get quick answers to the most common inquiries from our community."
+        subtitle="Find answers to the most common inquiries from our community."
         bgClass="bg-blue-600"
         textClass="text-white"
       />

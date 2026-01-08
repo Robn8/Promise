@@ -1,6 +1,28 @@
+import { useState } from "react";
 import Hero from "./Hero";
 
 function Resources() {
+  const [openModal, setOpenModal] = useState(null); // "caregivers" | "support-groups" | null
+
+  const modalContent = {
+    caregivers: {
+      title: "Caregivers",
+      img: "/careTable.png",
+      alt: "Caregivers Chart",
+      text:
+        "This chart provides a quick overview of caregiver resources, services, and support options available to families.",
+    },
+    "support-groups": {
+      title: "Support Groups",
+      img: "/supportTable.png",
+      alt: "Support Groups Chart",
+      text:
+        "This chart highlights support groups and community resources where caregivers can connect, share, and find encouragement.",
+    },
+  };
+
+  const current = openModal ? modalContent[openModal] : null;
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -12,8 +34,8 @@ function Resources() {
       />
 
       <div className="max-w-6xl mx-auto px-4 space-y-32">
-        {/* Medical Equipment Section */}
-        <section id="equipment" className="py-10 bg-gray-50">
+        {/* === Medical Equipment Section === */}
+        <section id="equipment" className="py-10">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
               Medical Equipment
@@ -21,7 +43,7 @@ function Resources() {
 
             <div className="grid gap-8 md:grid-cols-3">
               {/* Free */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
                 <div>
                   <h3 className="text-xl font-semibold text-blue-700 mb-3">Free</h3>
                   <p className="text-gray-600 mb-6">
@@ -37,7 +59,7 @@ function Resources() {
               </div>
 
               {/* Thrift Stores */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
                 <div>
                   <h3 className="text-xl font-semibold text-green-700 mb-3">Thrift Stores</h3>
                   <p className="text-gray-600 mb-6">
@@ -52,8 +74,8 @@ function Resources() {
                 </a>
               </div>
 
-              {/* Misc. */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+              {/* For Purchase */}
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
                 <div>
                   <h3 className="text-xl font-semibold text-purple-700 mb-3">For Purchase</h3>
                   <p className="text-gray-600 mb-6">
@@ -71,49 +93,134 @@ function Resources() {
           </div>
         </section>
 
+        {/* === Caregiving Support Section (NEW FLOW) === */}
+        <section id="care" className="py-10">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
+              Caregiving Support
+            </h2>
 
-        {/* === Caregivers Section === */}
-        <section id="care" className="space-y-12">
-          <h2 className="text-4xl font-bold text-center text-blue-700">Caregiver Support</h2>
+            <div className="grid gap-8 md:grid-cols-2">
+              {/* Caregivers box */}
+              <button
+                type="button"
+                onClick={() => setOpenModal("caregivers")}
+                className="text-center items-center bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-3">
+                    Caregivers
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Find caregiver resources, providers, and helpful networks that support daily care needs.
+                  </p>
+                </div>
+                <span className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition w-fit">
+                  View Chart
+                </span>
+              </button>
 
-          <div className="flex flex-col md:flex-row items-center gap-10 mb-0">
-            <div className="w-full md:w-1/2">
-              <img
-                src="/table3.png"
-                alt="Caregivers"
-                className="rounded-lg shadow-lg w-full object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Finding the right caregiver can transform the experience of at-home care. Explore our network of trusted
-                local professionals, from home health aides to companions who provide emotional support and help with daily tasks.
-              </p>
+              {/* Support Groups box */}
+              <button
+                type="button"
+                onClick={() => setOpenModal("support-groups")}
+                className="text-center items-center bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+              >
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-3">
+                    Support Groups
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Explore support groups where caregivers can connect, share, and feel less alone.
+                  </p>
+                </div>
+                <span className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition w-fit">
+                  View Chart
+                </span>
+              </button>
             </div>
           </div>
         </section>
 
-        {/* === Support Groups Section === */}
-        <section id="support-groups" className="space-y-12 py-20">
-          <h2 className="text-4xl font-bold text-center text-blue-600">Support Groups</h2>
+        {/* === Legal Help Section === */}
+        <section id="legal-help" className="py-10">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
+              Legal Help
+            </h2>
 
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div className="w-full md:w-1/2">
-              <img
-                src="/table4.png"
-                alt="Support Groups"
-                className="rounded-lg shadow-lg w-full object-cover"
-              />
-            </div>
-            <div className="w-full md:w-1/2 text-lg text-gray-700  leading-relaxed">
-              <p>
-                You're not alone. Support groups offer a place to share experiences, ask questions, and find strength in
-                community. Whether in-person or virtual, these groups can be a vital resource for caregivers and families alike.
-              </p>
+            <div className="grid gap-8 md:grid-cols-2">
+              {/* Kelly Sabo */}
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-3">Kelly Sabo</h3>
+                  <p className="text-gray-600 mb-6">
+                    Access a chart of legal resources and organizations that specialize in elder law, caregiver rights, and patient advocacy.
+                  </p>
+                </div>
+                <a
+                  href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/"
+                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+                >
+                  Learn More
+                </a>
+              </div>
+
+              {/* Frank Ryan*/}
+              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-700 mb-3">Frank Ryan</h3>
+                  <p className="text-gray-600 mb-6">
+                    Meet our featured attorney who is dedicated to supporting caregivers with legal expertise, compassionate guidance, and advocacy.
+                  </p>
+                </div>
+                <a
+                  href="https://www.attorneyfrankryan.com/"
+                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </section>
       </div>
+
+      {/* === Modal Popup (Chart) === */}
+      {current && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4"
+          onClick={() => setOpenModal(null)}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 py-4 border-b">
+              <h3 className="text-xl font-bold text-blue-700">{current.title}</h3>
+              <button
+                className="text-gray-500 hover:text-gray-700 text-2xl leading-none"
+                onClick={() => setOpenModal(null)}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="p-6 space-y-4">
+              <img
+                src={current.img}
+                alt={current.alt}
+                className="w-full rounded-lg shadow-md"
+              />
+              <p className="text-gray-700">{current.text}</p>
+              <p className="text-sm text-gray-500">
+                Click outside the window to close.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

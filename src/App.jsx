@@ -10,7 +10,9 @@ import ThriftStoreEquipment from "./Components/ThriftStoreEquipment";
 import ForPurchaseEquipment from "./Components/ForPurchaseEquipment";
 import FAQ from "./Components/FAQ";
 import TypesOfCare from "./Components/TypesOfCare";
+import ContactUs from "./Components/Contact";
 import Podcast from "./Components/Podcast";
+import Footer from "./Components/Footer";
 // import other pages as needed
 
 function App() {
@@ -27,11 +29,14 @@ function App() {
           <Route path="/equipment/free" element={<FreeMedicalEquipment />} />
           <Route path="/equipment/thrift" element={<ThriftStoreEquipment />} />
           <Route path="/equipment/purchase" element={<ForPurchaseEquipment />} />
+          <Route path="/legal/table" element={<ForPurchaseEquipment />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/typesofcare" element={<TypesOfCare />} />
+          <Route path="/contact" element={<ContactUs />} />
           {/* Add more pages like this */}
         </Routes>
+        <Footer />
       </div>
     </div>
   );
