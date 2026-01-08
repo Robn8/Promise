@@ -17,7 +17,7 @@ function Nav() {
     { name: "About Us", path: "/aboutus" },
     { name: "Resources", path: "/resources" },
     { name: "Types Of Care", path: "/typesofcare" },
-    { name: "Podcast", path: "/podcast" },
+    /*{ name: "Podcast", path: "/podcast" },*/
     { name: "FAQ", path: "/FAQ" },
     { name: "Contact Us", path: "/contact" },
   ];
@@ -25,8 +25,8 @@ function Nav() {
   const resourceSubLinks = [
     { name: "Equipment", path: "/resources#equipment" },
     { name: "Caregivers", path: "/resources#care" },
-    { name: "Support Groups", path: "/resources#support-groups" },
-    { name: "Legal Help", path: "/resources#legal" },
+    { name: "Support Groups", path: "/resources#care" },
+    { name: "Legal Help", path: "/resources#legal-help" },
   ];
 
   return (

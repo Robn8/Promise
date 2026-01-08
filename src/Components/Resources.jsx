@@ -115,7 +115,7 @@ function Resources() {
                     Find caregiver resources, providers, and helpful networks that support daily care needs.
                   </p>
                 </div>
-                <span className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition w-fit">
+                <span className="mt-auto inline-block px-48 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition w-fit">
                   View Chart
                 </span>
               </button>
@@ -134,7 +134,7 @@ function Resources() {
                     Explore support groups where caregivers can connect, share, and feel less alone.
                   </p>
                 </div>
-                <span className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition w-fit">
+                <span className="mt-auto inline-block px-48 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
                   View Chart
                 </span>
               </button>
@@ -159,7 +159,7 @@ function Resources() {
                   </p>
                 </div>
                 <a
-                  href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/"
+                  href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/" target ="blank"
                   className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
                 >
                   Learn More
@@ -175,7 +175,7 @@ function Resources() {
                   </p>
                 </div>
                 <a
-                  href="https://www.attorneyfrankryan.com/"
+                  href="https://www.attorneyfrankryan.com/" target="blank"
                   className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
                 >
                   Learn More
