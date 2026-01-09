@@ -9,10 +9,14 @@ function HomePage() {
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
           {/* Replace src with your video file or embed URL */}
           <video
-            src="/homepage-video.mp4"
+            src="https://res.cloudinary.com/dnpu71stc/video/upload/v1767995065/P2P_v5_zwo4pb.mp4"
             controls
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
           />
+
         </div>
 
         {/* Optional caption */}

@@ -10,11 +10,11 @@ function Footer() {
           <NavLink to="/" className="hover:text-white transition">
             Home
           </NavLink>
-          <NavLink to="/resources" className="hover:text-white transition">
-            Resources
-          </NavLink>
           <NavLink to="/aboutus" className="hover:text-white transition">
             About Us
+          </NavLink>
+          <NavLink to="/resources" className="hover:text-white transition">
+            Resources
           </NavLink>
           <NavLink to="/typesofcare" className="hover:text-white transition">
             Types of Care

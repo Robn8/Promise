@@ -19,7 +19,7 @@ function Nav() {
     { name: "Types Of Care", path: "/typesofcare" },
     /*{ name: "Podcast", path: "/podcast" },*/
     { name: "FAQ", path: "/FAQ" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const resourceSubLinks = [
