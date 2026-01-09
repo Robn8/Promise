@@ -10,6 +10,7 @@ function HomePage() {
           {/* Replace src with your video file or embed URL */}
           <video
             src="https://res.cloudinary.com/dnpu71stc/video/upload/v1767995065/P2P_v5_zwo4pb.mp4"
+            autoPlay
             controls
             muted
             loop
