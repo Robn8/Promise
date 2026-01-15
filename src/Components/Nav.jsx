@@ -32,6 +32,7 @@ function Nav() {
     { name: "About Us", path: "/aboutus" },
     { name: "Resources", path: "/resources" },
     { name: "Types Of Care", path: "/typesofcare" },
+    /*{ name: "Podcast", path: "/podcast" },*/
     { name: "FAQ", path: "/FAQ" },
     { name: "Contact", path: "/contact" },
   ];
@@ -49,15 +50,18 @@ function Nav() {
         isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* Brand */}
-        <NavLink to="/" className="flex items-center gap-3 group">
+      <div className="max-w-7xl mx-auto flex items-center px-6 py-4 relative">
+        {/* Brand (centered on mobile, left on desktop) */}
+        <NavLink
+          to="/"
+          className="flex items-center gap-3 group absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+        >
           <img
             src="/hand1.jpg" // change if needed
             alt="Promise2Papa Logo"
             className="w-15 h-15 object-contain"
           />
-          <div className="leading-tight">
+          <div className="leading-tight text-center md:text-left">
             <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition">
               Promise2Papa
             </div>
@@ -68,7 +72,7 @@ function Nav() {
         </NavLink>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="hidden md:flex items-center space-x-2 ml-auto">
           {links.map((link) =>
             link.name === "Resources" ? (
               <div
@@ -125,18 +129,20 @@ function Nav() {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 rounded-md hover:bg-blue-50 transition"
-          onClick={() => setMobileOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? (
-            <X className="w-6 h-6 text-gray-700" />
-          ) : (
-            <Menu className="w-6 h-6 text-gray-700" />
-          )}
-        </button>
+        {/* Mobile Menu Button (always right) */}
+        <div className="ml-auto md:hidden">
+          <button
+            className="p-2 rounded-md hover:bg-blue-50 transition"
+            onClick={() => setMobileOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? (
+              <X className="w-6 h-6 text-gray-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-700" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Panel */}
@@ -147,11 +153,10 @@ function Nav() {
       >
         <div className="px-6 pb-5 pt-2 space-y-2 bg-white/90 backdrop-blur-md border-t">
           {/* Mobile tagline */}
-          <div className="text-sm text-gray-500 sm:hidden pb-2">
+          <div className="text-sm text-gray-500 sm:hidden pb-2 text-center">
             You are not alone on your caregiving journey
           </div>
 
-          {/* Mobile Links */}
           {links.map((link) =>
             link.name === "Resources" ? (
               <div key={link.path} className="rounded-lg border border-gray-200">
@@ -196,7 +201,11 @@ function Nav() {
                 className={({ isActive }) =>
                   `block px-4 py-3 rounded-lg transition
                    hover:bg-blue-50 hover:text-blue-600
-                   ${isActive ? "bg-blue-50 text-blue-700 font-semibold" : "text-gray-700"}`
+                   ${
+                     isActive
+                       ? "bg-blue-50 text-blue-700 font-semibold"
+                       : "text-gray-700"
+                   }`
                 }
                 onClick={() => setMobileOpen(false)}
               >
