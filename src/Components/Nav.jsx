@@ -44,7 +44,7 @@ function Nav() {
           <img
             src="/hand1.jpg"
             alt="Promise2Papa Logo"
-            className="w-15 h-15 object-contain"
+            className="w-20 h-20 object-contain"
           />
         </NavLink>
 
