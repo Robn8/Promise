@@ -44,7 +44,7 @@ function Nav() {
           <img
             src="/hand1.jpg"
             alt="Promise2Papa Logo"
-            className="w-20 h-15 object-contain"
+            className="w-20 h-20 object-contain"
           />
         </NavLink>
 
@@ -53,7 +53,7 @@ function Nav() {
           to="/"
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-center"
         >
-          <div className="text-2xl font-bold text-blue-600">
+          <div className="text-5xl font-bold text-blue-600">
             Promise2Papa
           </div>
           <div className="hidden sm:block text-sm text-gray-500">
