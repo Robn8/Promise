@@ -19,7 +19,9 @@ function Nav() {
     { name: "About Us", path: "/aboutus" },
     { name: "Resources", path: "/resources" },
     { name: "Types Of Care", path: "/typesofcare" },
+    { name: "Veterans", path: "/typesofcare" },
     { name: "FAQ", path: "/FAQ" },
+    { name: "Care Registry", path: "/typesofcare" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -53,7 +55,7 @@ function Nav() {
           to="/"
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-center"
         >
-          <div className="text-5xl font-bold text-blue-600">
+          <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600">
             Promise2Papa
           </div>
           <div className="hidden sm:block text-sm text-gray-500">
