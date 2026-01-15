@@ -37,12 +37,26 @@ function Nav() {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Title */}
-        <NavLink
-          to="/"
-          className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition"
-        >
-          Promise 2 Papa
-        </NavLink>
+        {/* Brand */}
+<NavLink to="/" className="flex items-center gap-3 group">
+  {/* Logo */}
+  <img
+    src="/hand1.jpg"   // <-- replace with your logo path
+    alt="Promise 2 Papa Logo"
+    className="w-15 h-15 object-contain"
+  />
+
+  {/* Text */}
+  <div className="leading-tight">
+    <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition">
+      Promise 2 Papa
+    </div>
+    <div className="text-sm text-gray-500">
+      You are not alone on your caregiving journey
+    </div>
+  </div>
+</NavLink>
+
 
         {/* Navigation Links */}
         <div className="flex items-center space-x-6">
