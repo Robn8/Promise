@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 function Nav() {
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false); // desktop resources dropdown
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -12,12 +15,23 @@ function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu when resizing to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileOpen(false);
+        setMobileResourcesOpen(false);
+      }
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   const links = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/aboutus" },
     { name: "Resources", path: "/resources" },
     { name: "Types Of Care", path: "/typesofcare" },
-    /*{ name: "Podcast", path: "/podcast" },*/
     { name: "FAQ", path: "/FAQ" },
     { name: "Contact", path: "/contact" },
   ];
@@ -36,30 +50,25 @@ function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        {/* Title */}
         {/* Brand */}
-      <NavLink to="/" className="flex items-center gap-3 group">
-        {/* Logo */}
-        <img
-          src="/hand1.jpg"   // <-- replace with your logo path
-          alt="Promise 2 Papa Logo"
-          className="w-15 h-15 object-contain"
-        />
-
-        {/* Text */}
-        <div className="leading-tight">
-          <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition">
-            Promise 2 Papa
+        <NavLink to="/" className="flex items-center gap-3 group">
+          <img
+            src="/hand1.jpg" // change if needed
+            alt="Promise2Papa Logo"
+            className="w-15 h-15 object-contain"
+          />
+          <div className="leading-tight">
+            <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition">
+              Promise2Papa
+            </div>
+            <div className="text-sm text-gray-500 hidden sm:block">
+              You are not alone on your caregiving journey
+            </div>
           </div>
-          <div className="text-sm text-gray-500">
-            You are not alone on your caregiving journey
-          </div>
-        </div>
         </NavLink>
 
-
-        {/* Navigation Links */}
-        <div className="flex items-center space-x-6">
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center space-x-2">
           {links.map((link) =>
             link.name === "Resources" ? (
               <div
@@ -82,7 +91,11 @@ function Nav() {
 
                 <div
                   className={`absolute left-0 w-44 bg-white border rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 ease-out 
-                    ${showDropdown ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}
+                    ${
+                      showDropdown
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 -translate-y-2 pointer-events-none"
+                    }`}
                 >
                   {resourceSubLinks.map((sublink) => (
                     <NavLink
@@ -105,6 +118,87 @@ function Nav() {
                    hover:bg-blue-50 hover:text-blue-500 
                    ${isActive ? "text-blue-600 font-semibold" : "text-gray-700"}`
                 }
+              >
+                {link.name}
+              </NavLink>
+            )
+          )}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 rounded-md hover:bg-blue-50 transition"
+          onClick={() => setMobileOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? (
+            <X className="w-6 h-6 text-gray-700" />
+          ) : (
+            <Menu className="w-6 h-6 text-gray-700" />
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu Panel */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          mobileOpen ? "max-h-[520px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 pb-5 pt-2 space-y-2 bg-white/90 backdrop-blur-md border-t">
+          {/* Mobile tagline */}
+          <div className="text-sm text-gray-500 sm:hidden pb-2">
+            You are not alone on your caregiving journey
+          </div>
+
+          {/* Mobile Links */}
+          {links.map((link) =>
+            link.name === "Resources" ? (
+              <div key={link.path} className="rounded-lg border border-gray-200">
+                <button
+                  className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-blue-50 transition"
+                  onClick={() => setMobileResourcesOpen((v) => !v)}
+                >
+                  <span className="font-medium">Resources</span>
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      mobileResourcesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    mobileResourcesOpen ? "max-h-64" : "max-h-0"
+                  }`}
+                >
+                  <div className="py-2">
+                    {resourceSubLinks.map((sublink) => (
+                      <NavLink
+                        key={sublink.path}
+                        to={sublink.path}
+                        className="block px-6 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition"
+                        onClick={() => {
+                          setMobileOpen(false);
+                          setMobileResourcesOpen(false);
+                        }}
+                      >
+                        {sublink.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <NavLink
+                key={link.path}
+                to={link.path}
+                className={({ isActive }) =>
+                  `block px-4 py-3 rounded-lg transition
+                   hover:bg-blue-50 hover:text-blue-600
+                   ${isActive ? "bg-blue-50 text-blue-700 font-semibold" : "text-gray-700"}`
+                }
+                onClick={() => setMobileOpen(false)}
               >
                 {link.name}
               </NavLink>
