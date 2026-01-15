@@ -155,7 +155,7 @@ function Resources() {
                 <div>
                   <h3 className="text-xl font-semibold text-blue-700 mb-3">Kelly Sabo</h3>
                   <p className="text-gray-600 mb-6">
-                    Access a chart of legal resources and organizations that specialize in elder law, caregiver rights, and patient advocacy.
+                  Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents. Her work focuses on ensuring accountability for those harmed by neglect or misconduct.
                   </p>
                 </div>
                 <a
@@ -171,7 +171,7 @@ function Resources() {
                 <div>
                   <h3 className="text-xl font-semibold text-blue-700 mb-3">Frank Ryan</h3>
                   <p className="text-gray-600 mb-6">
-                    Meet our featured attorney who is dedicated to supporting caregivers with legal expertise, compassionate guidance, and advocacy.
+                  Frank Ryan is a highly experienced and trusted attorney with over 36 years of legal practice across real estate and general law. His work spans many areas including family and domestic relations, probate and estates, personal injury, civil litigation and more.
                   </p>
                 </div>
                 <a
