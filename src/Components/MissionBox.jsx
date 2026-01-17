@@ -9,7 +9,7 @@ function HomePage() {
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
           {/* Replace src with your video file or embed URL */}
           <video
-            src="https://res.cloudinary.com/dnpu71stc/video/upload/v1767995065/P2P_v5_zwo4pb.mp4"
+            src="https://res.cloudinary.com/dnpu71stc/video/upload/v1768610487/P2P_v6_hdctaq.mp4"
             autoPlay
             controls
             muted
