@@ -13,6 +13,7 @@ import TypesOfCare from "./Components/TypesOfCare";
 import ContactUs from "./Components/Contact";
 import Podcast from "./Components/Podcast";
 import Footer from "./Components/Footer";
+import Veterans from "./Components/Veterans";
 // import other pages as needed
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/typesofcare" element={<TypesOfCare />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/veterans" element={<Veterans />} />
           {/* Add more pages like this */}
         </Routes>
         <Footer />

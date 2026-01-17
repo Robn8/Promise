@@ -19,7 +19,7 @@ function Nav() {
     { name: "About Us", path: "/aboutus" },
     { name: "Resources", path: "/resources" },
     { name: "Types Of Care", path: "/typesofcare" },
-    { name: "Veterans", path: "/typesofcare" },
+    { name: "Veterans", path: "/Veterans" },
     { name: "FAQ", path: "/FAQ" },
     { name: "Care Registry", path: "/typesofcare" },
     { name: "Contact", path: "/contact" },
