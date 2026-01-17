@@ -1,103 +1,88 @@
-import { useState } from "react";
 import Hero from "./Hero";
 
-function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you for reaching out! We will get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
-  };
-
+function Contact() {
   return (
     <div className="min-h-screen bg-gray-50">
-
-      {/* Hero Section */}
       <Hero
         title="Contact Us"
-        subtitle="You are not alone on your caregiving journey"
+        subtitle="We’d love to hear from you."
         bgClass="bg-blue-600"
         textClass="text-white"
       />
 
-      {/* Form Section */}
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+      <section className="max-w-3xl mx-auto px-6 py-16">
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
 
-          <h2 className="text-2xl font-bold text-blue-700 mb-6 text-center">
-            
-          </h2>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="space-y-5"
+          >
+            {/* Required hidden input for Netlify */}
+            <input type="hidden" name="form-name" value="contact" />
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Honeypot (hidden) */}
+            <p className="hidden">
+              <label>
+                Don’t fill this out: <input name="bot-field" />
+              </label>
+            </p>
 
-            {/* Name */}
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Name
               </label>
               <input
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 placeholder="Your name"
               />
             </div>
 
-            {/* Email */}
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email
               </label>
               <input
-                name="email"
                 type="email"
-                value={formData.email}
-                onChange={handleChange}
+                name="email"
                 required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 placeholder="you@example.com"
               />
             </div>
 
-            {/* Message */}
             <div>
-              <label className="block text-gray-700 font-medium mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Message
               </label>
               <textarea
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
                 required
-                rows="5"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                placeholder="How can we help you?"
+                rows="6"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="How can we help?"
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition shadow-sm hover:shadow-md"
             >
-              Submit
+              Send Message
             </button>
           </form>
+
+          <p className="text-sm text-gray-500 mt-4">
+            Your message will be delivered securely.
+          </p>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
 
-export default ContactUs;
+export default Contact;
