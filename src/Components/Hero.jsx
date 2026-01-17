@@ -20,7 +20,7 @@ function Hero({
   children,
 }) {
   return (
-    <section className={clsx("py-16 px-4 text-center", bgClass, textClass)}>
+    <section className={clsx("py-10 px-4 text-center", bgClass, textClass)}>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-5xl font-bold mb-4">{title}</h1>
         {subtitle && <p className="text-lg mb-6">{subtitle}</p>}
