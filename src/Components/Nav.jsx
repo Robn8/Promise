@@ -34,10 +34,14 @@ function Nav() {
 
   return (
     <div
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-white"
-      }`}
+      className={`sticky top-0 z-50 transition-all duration-300 
+        ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-lg shadow-md border-b border-blue-100"
+            : "bg-white/85 backdrop-blur-md border-b border-blue-100"
+        }`}
     >
+
       {/* NAV BAR */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between md:justify-between">
 
