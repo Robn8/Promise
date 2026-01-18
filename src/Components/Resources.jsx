@@ -94,28 +94,28 @@ function Resources() {
         </section>
 
         {/* === Caregiving Support Section (NEW FLOW) === */}
-        <section id="care" className="py-10">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
+        <section id="care" className="py-0 md:py-10">
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700 mb-4 md:mb-8">
               Caregiving Support
             </h2>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-5 md:gap-8 md:grid-cols-2">
               {/* Caregivers box */}
               <button
                 type="button"
                 onClick={() => setOpenModal("caregivers")}
-                className="text-center items-center bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="bg-white rounded-xl shadow-lg p-4 md:p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-blue-700 mb-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-blue-700 mb-2 md:mb-3">
                     Caregivers
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                     Find caregiver resources, providers, and helpful networks that support daily care needs.
                   </p>
                 </div>
-                <span className="mt-auto inline-block px-48 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition w-fit">
+                <span className="mt-auto inline-block px-6 md:px-10 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
                   View Chart
                 </span>
               </button>
@@ -124,23 +124,24 @@ function Resources() {
               <button
                 type="button"
                 onClick={() => setOpenModal("support-groups")}
-                className="text-center items-center bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="bg-white rounded-xl shadow-lg p-4 md:p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-blue-700 mb-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-blue-700 mb-2 md:mb-3">
                     Support Groups
                   </h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                     Explore support groups where caregivers can connect, share, and feel less alone.
                   </p>
                 </div>
-                <span className="mt-auto inline-block px-48 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
+                <span className="mt-auto inline-block px-6 md:px-10 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
                   View Chart
                 </span>
               </button>
             </div>
           </div>
         </section>
+
 
         {/* === Legal Help Section === */}
         <section id="legal-help" className="py-10">
