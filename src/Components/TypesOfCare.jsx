@@ -43,7 +43,7 @@ function TypesOfCare() {
           </div>
 
           {/* Right: Image */}
-          <div className="w-full h-[600px] md:w-1/4">
+          <div className="hidden md:block w-full h-[600px] md:w-1/4">
             <img
               src="/drpic1.svg"
               alt="Doctor explaining palliative care"
