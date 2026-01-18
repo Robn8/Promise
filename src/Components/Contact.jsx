@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hero from "./Hero";
+import Checkmark from "./Checkmark";
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -101,6 +102,7 @@ function Contact() {
           ) : (
             /* THANK YOU STATE (same card) */
             <div className="py-16 text-center">
+              <Checkmark />
               <h2 className="text-3xl font-bold text-blue-700 mb-4">
                 Thank you for your submission
               </h2>
