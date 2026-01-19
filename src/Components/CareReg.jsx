@@ -15,11 +15,15 @@ function CareReg() {
                 <h2 className="text-4xl font-bold text-center text-blue-700 mb-10">
                 Caregiver's Registry
                 </h2>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p className="text-center">
+                Part of our mission is to nourish and support caregivers. 
+                Through our upcoming Caregiver Registry, we hope to connect with you and learn more about your caregiving journey. 
+                You will have the opportunity to share your caregiving needs, whether they are personal support needs or supplies that would help you care for your loved one.
+                </p>
+                <br />
+                <p className="text-center">
+                Please check back soon for a personal opportunity to apply for a caregiving grant designed to help support you and ease the demands of caregiving. 
+                You are not alone. We are here to walk alongside you.
                 </p>
             </section>
         </div>
