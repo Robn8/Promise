@@ -14,7 +14,7 @@ const Checkmark = () => {
         cy="36"
         r="34"
         fill="none"
-        stroke="#0f172a"
+        stroke="#34b233"
         strokeWidth="4"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
@@ -25,7 +25,7 @@ const Checkmark = () => {
       <motion.path
         d="M20 38 L32 50 L52 26"
         fill="none"
-        stroke="#0f172a"
+        stroke="#008000"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
