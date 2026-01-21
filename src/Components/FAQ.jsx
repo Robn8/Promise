@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 function FAQ() {
   const faqs = [
@@ -33,7 +34,7 @@ function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Hero section (full-width) */}
       <Hero
         title="Frequently Asked Questions"
@@ -42,6 +43,7 @@ function FAQ() {
         textClass="text-white"
       />
 
+      <main className="flex-1">
       {/* FAQ Content */}
       <section className="max-w-4xl mx-auto px-4 py-16">
         <div className="space-y-4">
@@ -76,6 +78,8 @@ function FAQ() {
           ))}
         </div>
       </section>
+      </main>
+      <Footer showDisclaimer/>
     </div>
   );
 }

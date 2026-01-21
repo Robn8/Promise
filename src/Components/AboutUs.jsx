@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 function AboutUs() {
   return (
@@ -66,6 +67,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

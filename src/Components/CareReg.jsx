@@ -1,8 +1,9 @@
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 function CareReg() {
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 flex flex-col">
               {/* Hero */}
               <Hero
                 title="Coming Soon"
@@ -10,7 +11,7 @@ function CareReg() {
                 bgClass="bg-blue-600"
                 textClass="text-white"
               />
-
+            <main className="flex-1">
             <section className="max-w-6xl mx-auto px-6 py-16">
                 <h2 className="text-4xl font-bold text-center text-blue-700 mb-10">
                 Caregiver's Registry
@@ -26,6 +27,8 @@ function CareReg() {
                 You are not alone. We are here to walk alongside you.
                 </p>
             </section>
+            </main>
+            <Footer />
         </div>
     );
 }

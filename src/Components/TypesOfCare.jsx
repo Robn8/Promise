@@ -1,4 +1,5 @@
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 function TypesOfCare() {
   return (
@@ -115,6 +116,7 @@ function TypesOfCare() {
           </a>
         </div>
       </section>
+      <Footer showDisclaimer/>
     </div>
   );
 }

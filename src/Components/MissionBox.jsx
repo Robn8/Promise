@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Footer from "./Footer";
 
 function HomePage() {
   return (
@@ -59,6 +60,7 @@ function HomePage() {
           </p>
         </NavLink>
       </section>
+      <Footer />
     </div>
   );
 }

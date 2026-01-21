@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hero from "./Hero";
+import Footer from "./Footer";
 import Checkmark from "./Checkmark";
 
 function Contact() {
@@ -113,6 +114,7 @@ function Contact() {
           )}
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
