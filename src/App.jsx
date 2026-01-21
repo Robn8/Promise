@@ -40,7 +40,7 @@ function App() {
           <Route path="/carereg" element={<CareReg />} />
           {/* Add more pages like this */}
         </Routes>
-        <Footer />
+        {/*<Footer />*/}
       </div>
     </div>
   );

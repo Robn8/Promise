@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Hero from "./Hero";
+import Footer from "./Footer";
 
 function Resources() {
   const [openModal, setOpenModal] = useState(null); // "caregivers" | "support-groups" | null
@@ -222,6 +223,7 @@ function Resources() {
           </div>
         </div>
       )}
+      <Footer showDisclaimer/>
     </div>
   );
 }
