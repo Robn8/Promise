@@ -45,16 +45,28 @@ function Nav() {
       {/* NAV BAR */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between md:justify-between">
 
-        {/* LEFT: Logo */}
-        <NavLink to="/" className="flex items-center mr-4 md:mr-6 shrink-0">
-          <div className=" p-1.5 rounded-full bg-blue-600/15 ring-2 ring-blue-600 shadow-mdtransition hover:scale-105">
+        {/* LEFT: Logo with Heart */}
+        <NavLink to="/" className="group flex items-center mr-4 md:mr-6 shrink-0">
+          <div className="relative w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
+            
+            {/* Heart background */}
+            <svg
+              viewBox="0 0 24 24"
+              className="absolute inset-0 w-full h-full fill-blue-600/15 stroke-blue-500 stroke-[1.5] transition group-hover:fill-blue-600/25"
+            >
+              <path d="M12 21s-6.716-4.35-9.428-7.062C.46 11.826.333 8.98 2.343 6.97c2.01-2.01 4.856-1.883 6.968.23L12 9.889l2.689-2.689c2.112-2.112 4.958-2.24 6.968-.23 2.01 2.01 1.883 4.856-.23 6.968C18.716 16.65 12 21 12 21z" />
+            </svg>
+
+            {/* Logo image */}
             <img
               src="/hand1.jpg"
               alt="Promise2Papa Logo"
-              className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover bg-white"
+              className="relative z-10 w-10 h-10 md:w-10 mt-2 md:h-10 rounded-full object-cover bg-white shadow-sm"
             />
           </div>
         </NavLink>
+
+
 
 
 
