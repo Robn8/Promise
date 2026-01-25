@@ -47,7 +47,7 @@ function Nav() {
 
         {/* LEFT: Logo */}
         <NavLink to="/" className="flex items-center mr-4 md:mr-6 shrink-0">
-          <div className="p-1 rounded-full bg-blue-600/10 ring-2 ring-blue-500 shadow-sm transition hover:scale-105">
+          <div className=" p-1.5 rounded-full bg-blue-600/15 ring-2 ring-blue-600 shadow-mdtransition hover:scale-105">
             <img
               src="/hand1.jpg"
               alt="Promise2Papa Logo"
