@@ -15,7 +15,7 @@ function Nav() {
   }, []);
 
   const links = [
-    { name: "Home", path: "/" },
+    /*{ name: "Home", path: "/" },*/
     { name: "About Us", path: "/aboutus" },
     { name: "Resources", path: "/resources" },
     { name: "Types Of Care", path: "/typesofcare" },
