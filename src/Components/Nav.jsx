@@ -46,15 +46,15 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between md:justify-between">
 
         {/* LEFT: Logo */}
-<NavLink to="/" className="flex items-center mr-4 md:mr-6 shrink-0">
-  <div className="p-1 rounded-full bg-blue-600/10 ring-2 ring-blue-500 shadow-sm transition hover:scale-105">
-    <img
-      src="/hand1.jpg"
-      alt="Promise2Papa Logo"
-      className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover bg-white"
-    />
-  </div>
-</NavLink>
+        <NavLink to="/" className="flex items-center mr-4 md:mr-6 shrink-0">
+          <div className="p-1 rounded-full bg-blue-600/10 ring-2 ring-blue-500 shadow-sm transition hover:scale-105">
+            <img
+              src="/hand1.jpg"
+              alt="Promise2Papa Logo"
+              className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover bg-white"
+            />
+          </div>
+        </NavLink>
 
 
 
