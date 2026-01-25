@@ -61,7 +61,9 @@ function Nav() {
             <img
               src="/hand1.jpg"
               alt="Promise2Papa Logo"
-              className="relative z-10 w-10 h-10 md:w-10 mt-2 md:h-10 rounded-full object-cover bg-white shadow-sm"
+              className="relative z-10 w-10 h-10 md:w-10 md:h-10 mt-3 rounded-full object-cover bg-white shadow-sm 
+                         transition-transform duration-300 ease-out
+                         group-hover:scale-110 group-hover:shadow-md"
             />
           </div>
         </NavLink>
