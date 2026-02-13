@@ -80,7 +80,7 @@ function Nav() {
           <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600">
             Promise2Papa
           </div>
-          <div className="hidden sm:block text-sm text-gray-500">
+          <div className="hidden sm:block text-sm text-gray-500 mt-1">
             You are not alone on your caregiving journey
           </div>
         </NavLink>
