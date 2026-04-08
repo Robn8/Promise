@@ -1,6 +1,8 @@
 function Footer({ showDisclaimer = false }) {
   return (
     <footer className="bg-gray-100 border-t border-gray-200 mt-16">
+      
+      {/* Top row */}
       <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
 
         {/* Left links */}
@@ -24,6 +26,15 @@ function Footer({ showDisclaimer = false }) {
           © {new Date().getFullYear()} Promise2Papa
         </div>
       </div>
+
+      {/* Bottom 501(c)(3) section */}
+      <div className="border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 py-4 text-center text-xs text-gray-500">
+          Promise2Papa is a registered 501(c)(3) nonprofit organization. 
+          Contributions are tax-deductible to the extent permitted by law.
+        </div>
+      </div>
+
     </footer>
   );
 }

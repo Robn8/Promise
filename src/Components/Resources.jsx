@@ -30,7 +30,7 @@ function Resources() {
       <Hero
         title="Helpful Resources"
         subtitle="Equipment, caregiver services, and community support for every step of the journey."
-        bgClass="bg-blue-600"
+        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />
 
