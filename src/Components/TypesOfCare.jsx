@@ -164,7 +164,7 @@ function TypesOfCare() {
         {/* Download */}
         <div className="text-center pt-4">
           <a
-            href="/PalliativeCare.pdf"
+            href="/PalliativeCare.pptx .pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-white font-semibold shadow-md transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
