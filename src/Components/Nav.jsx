@@ -77,7 +77,7 @@ function Nav() {
           to="/"
           className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-center"
         >
-          <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600">
+          <div className="text-4xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
             Promise2Papa
           </div>
           <div className="hidden sm:block text-sm text-gray-500 mt-1">
