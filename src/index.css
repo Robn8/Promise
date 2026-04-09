@@ -66,3 +66,23 @@
 .animate-hero-fade-up {
   animation: heroFadeUp 0.8s ease-out forwards;
 }
+
+@keyframes fadeUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up-soft {
+  animation: fadeUpSoft 0.8s ease-out forwards;
+}
+
+.animate-fade-up-soft-delay {
+  opacity: 0;
+  animation: fadeUpSoft 1s ease-out 0.15s forwards;
+}
