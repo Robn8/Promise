@@ -8,7 +8,7 @@ function Veterans() {
       <Hero
         title="Veterans"
         subtitle="Support and resources for veterans and their families."
-        bgClass="bg-blue-600"
+        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />
       <main className="flex-1">

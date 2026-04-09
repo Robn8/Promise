@@ -11,7 +11,7 @@ function Resources() {
       img: "/careTable.png",
       alt: "Caregivers Chart",
       text:
-        "This chart provides a quick overview of caregiver resources, services, and support options available to families.",
+        "This chart provides a quick overview of caregiver resources, services and support options available to families.",
     },
     "support-groups": {
       title: "Support Groups",
@@ -29,7 +29,7 @@ function Resources() {
       {/* Hero Section */}
       <Hero
         title="Helpful Resources"
-        subtitle="Equipment, caregiver services, and community support for every step of the journey."
+        subtitle="Equipment, caregiver services and support for every step of the journey."
         bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />

@@ -8,7 +8,7 @@ function TypesOfCare() {
       <Hero
         title="Types of Care"
         subtitle="Understanding Palliative and Hospice Care"
-        bgClass="bg-blue-600"
+        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />
 

@@ -8,7 +8,7 @@ function CareReg() {
               <Hero
                 title="Coming Soon"
                 subtitle="'Come to me, all you who are weary and burdened, and I will give you rest.' Matthew 11:28"
-                bgClass="bg-blue-600"
+                bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
                 textClass="text-white"
               />
             <main className="flex-1">

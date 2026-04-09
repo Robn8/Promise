@@ -39,7 +39,7 @@ function FAQ() {
       <Hero
         title="Frequently Asked Questions"
         subtitle="Find answers to the most common inquiries from our community."
-        bgClass="bg-blue-600"
+        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />
 

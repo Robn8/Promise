@@ -8,7 +8,7 @@ function AboutUs() {
       <Hero
         title="Promise 2 Papa"
         subtitle="A Ministry of Love Born from Loss"
-        bgClass="bg-blue-600"
+        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />
 
