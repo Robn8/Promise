@@ -43,10 +43,10 @@ function HomePage() {
             Explore Resources
           </NavLink>
           <NavLink
-            to="/aboutus"
+            to="/contact"
             className="inline-flex items-center justify-center rounded-xl border border-white/70 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
           >
-            Our Story
+            Contact Us
           </NavLink>
         </div>
       </Hero>
