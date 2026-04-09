@@ -2,8 +2,97 @@ import { useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
 
+function SectionHeader({ title, subtitle }) {
+  return (
+    <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
+      <h2 className="text-2xl font-bold text-blue-700 sm:text-3xl md:text-4xl">
+        {title}
+      </h2>
+      {subtitle && (
+        <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function ResourceCard({
+  title,
+  description,
+  href,
+  buttonText = "Learn More",
+  accent = "blue",
+  external = false,
+  onClick,
+  isButton = false,
+}) {
+  const accentMap = {
+    blue: {
+      title: "text-blue-700",
+      button: "bg-blue-600 hover:bg-blue-700 focus:ring-blue-400",
+    },
+    green: {
+      title: "text-green-700",
+      button: "bg-green-600 hover:bg-green-700 focus:ring-green-400",
+    },
+    purple: {
+      title: "text-purple-700",
+      button: "bg-purple-600 hover:bg-purple-700 focus:ring-purple-400",
+    },
+  };
+
+  const styles = accentMap[accent] || accentMap.blue;
+
+  const baseCard =
+    "group h-full rounded-2xl bg-white p-6 sm:p-7 shadow-sm ring-1 ring-gray-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl";
+
+  if (isButton) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={`${baseCard} w-full text-left focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2`}
+      >
+        <div className="flex h-full flex-col">
+          <div>
+            <h3 className={`mb-3 text-xl font-semibold ${styles.title}`}>{title}</h3>
+            <p className="min-h-[72px] leading-7 text-gray-600">{description}</p>
+          </div>
+
+          <span
+            className={`mt-6 inline-flex w-fit items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white transition ${styles.button}`}
+          >
+            View Chart
+          </span>
+        </div>
+      </button>
+    );
+  }
+
+  return (
+    <div className={baseCard}>
+      <div className="flex h-full flex-col">
+        <div>
+          <h3 className={`mb-3 text-xl font-semibold ${styles.title}`}>{title}</h3>
+          <p className="min-h-[72px] leading-7 text-gray-600">{description}</p>
+        </div>
+
+        <a
+          href={href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+          className={`mt-6 inline-flex w-fit items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-offset-2 ${styles.button}`}
+        >
+          {buttonText}
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function Resources() {
-  const [openModal, setOpenModal] = useState(null); // "caregivers" | "support-groups" | null
+  const [openModal, setOpenModal] = useState(null);
 
   const modalContent = {
     caregivers: {
@@ -11,7 +100,7 @@ function Resources() {
       img: "/careTable.png",
       alt: "Caregivers Chart",
       text:
-        "This chart provides a quick overview of caregiver resources, services and support options available to families.",
+        "This chart provides a quick overview of caregiver resources, services, and support options available to families.",
     },
     "support-groups": {
       title: "Support Groups",
@@ -26,204 +115,133 @@ function Resources() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <Hero
         title="Helpful Resources"
-        subtitle="Equipment, caregiver services and support for every step of the journey."
+        subtitle="Equipment, caregiver services, legal guidance, and support for every step of the journey."
         bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
         textClass="text-white"
       />
 
-      <div className="max-w-6xl mx-auto px-4 space-y-32">
-        {/* === Medical Equipment Section === */}
-        <section id="equipment" className="py-10">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
-              Medical Equipment
-            </h2>
+      <main className="mx-auto max-w-6xl space-y-16 px-4 py-12 sm:px-6 sm:py-16 sm:space-y-20">
+        <section id="equipment">
+          <SectionHeader
+            title="Medical Equipment"
+            subtitle="Explore options for finding equipment through free programs, low-cost local sources, or direct purchase."
+          />
 
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Free */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-700 mb-3">Free</h3>
-                  <p className="text-gray-600 mb-6">
-                    Discover places and programs that offer medical equipment at no cost to caregivers and patients.
-                  </p>
-                </div>
-                <a
-                  href="/equipment/free"
-                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-                >
-                  Learn More
-                </a>
-              </div>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+            <ResourceCard
+              title="Free"
+              description="Discover places and programs that offer medical equipment at no cost to caregivers and patients."
+              href="/equipment/free"
+              accent="blue"
+            />
 
-              {/* Thrift Stores */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
-                <div>
-                  <h3 className="text-xl font-semibold text-green-700 mb-3">Thrift Stores</h3>
-                  <p className="text-gray-600 mb-6">
-                    Browse local thrift stores where affordable or gently-used medical equipment may be available.
-                  </p>
-                </div>
-                <a
-                  href="/equipment/thrift"
-                  className="mt-auto inline-block px-4 py-2 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition"
-                >
-                  Learn More
-                </a>
-              </div>
+            <ResourceCard
+              title="Thrift Stores"
+              description="Browse local thrift stores where affordable or gently used medical equipment may be available."
+              href="/equipment/thrift"
+              accent="green"
+            />
 
-              {/* For Purchase */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
-                <div>
-                  <h3 className="text-xl font-semibold text-purple-700 mb-3">For Purchase</h3>
-                  <p className="text-gray-600 mb-6">
-                    Explore various other resources, tools, or services that are available for purchase.
-                  </p>
-                </div>
-                <a
-                  href="/equipment/purchase"
-                  className="mt-auto inline-block px-4 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
+            <ResourceCard
+              title="For Purchase"
+              description="Explore additional equipment providers and services available for purchase to support ongoing care needs."
+              href="/equipment/purchase"
+              accent="purple"
+            />
           </div>
         </section>
 
-        {/* === Caregiving Support Section (NEW FLOW) === */}
-        <section id="care" className="py-0 md:py-10">
-          <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
-              Caregiving Support
-            </h2>
+        <section id="care">
+          <SectionHeader
+            title="Caregiving Support"
+            subtitle="Find practical caregiver tools and community connections that can help families feel more supported and less alone."
+          />
 
-            <div className="grid gap-5 md:gap-8 md:grid-cols-2">
-              {/* Caregivers box */}
-              <button
-                type="button"
-                onClick={() => setOpenModal("caregivers")}
-                className="bg-white rounded-xl shadow-lg p-4 md:p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold text-blue-700 mb-2 md:mb-3">
-                    Caregivers
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
-                    Find caregiver resources, providers, and helpful networks that support daily care needs.
-                  </p>
-                </div>
-                <span className="mt-auto inline-block px-6 md:px-10 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
-                  View Chart
-                </span>
-              </button>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+            <ResourceCard
+              title="Caregivers"
+              description="Find caregiver resources, providers, and helpful networks that support daily care needs."
+              accent="blue"
+              isButton
+              onClick={() => setOpenModal("caregivers")}
+            />
 
-              {/* Support Groups box */}
-              <button
-                type="button"
-                onClick={() => setOpenModal("support-groups")}
-                className="bg-white rounded-xl shadow-lg p-4 md:p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold text-blue-700 mb-2 md:mb-3">
-                    Support Groups
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
-                    Explore support groups where caregivers can connect, share, and feel less alone.
-                  </p>
-                </div>
-                <span className="mt-auto inline-block px-6 md:px-10 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
-                  View Chart
-                </span>
-              </button>
-            </div>
+            <ResourceCard
+              title="Support Groups"
+              description="Explore support groups where caregivers can connect, share, and find encouragement."
+              accent="blue"
+              isButton
+              onClick={() => setOpenModal("support-groups")}
+            />
           </div>
         </section>
 
+        <section id="legal-help">
+          <SectionHeader
+            title="Legal Help"
+            subtitle="Learn about trusted legal professionals who may be able to help families navigating long-term care, estate, injury, or related concerns."
+          />
 
-        {/* === Legal Help Section === */}
-        <section id="legal-help" className="py-10">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-8">
-              Legal Help
-            </h2>
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+            <ResourceCard
+              title="Kelly Sabo"
+              description="Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents."
+              href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/"
+              accent="blue"
+              external
+            />
 
-            <div className="grid gap-8 md:grid-cols-2">
-              {/* Kelly Sabo */}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-700 mb-3">Kelly Sabo</h3>
-                  <p className="text-gray-600 mb-6">
-                  Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents. Her work focuses on ensuring accountability for those harmed by neglect or misconduct.
-                  </p>
-                </div>
-                <a
-                  href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/" target ="blank"
-                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-                >
-                  Learn More
-                </a>
-              </div>
-
-              {/* Frank Ryan*/}
-              <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between border border-gray-200 hover:shadow-2xl transition">
-                <div>
-                  <h3 className="text-xl font-semibold text-blue-700 mb-3">Frank Ryan</h3>
-                  <p className="text-gray-600 mb-6">
-                  Frank Ryan is a highly experienced and trusted attorney with over 36 years of legal practice across real estate and general law. His work spans many areas including family and domestic relations, probate and estates, personal injury, civil litigation and more.
-                  </p>
-                </div>
-                <a
-                  href="https://www.attorneyfrankryan.com/" target="blank"
-                  className="mt-auto inline-block px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
+            <ResourceCard
+              title="Frank Ryan"
+              description="Frank Ryan is an experienced attorney with decades of practice across real estate, family matters, probate and estates, personal injury, civil litigation, and more."
+              href="https://www.attorneyfrankryan.com/"
+              accent="blue"
+              external
+            />
           </div>
         </section>
-      </div>
+      </main>
 
-      {/* === Modal Popup (Chart) === */}
       {current && (
         <div
-          className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center px-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 px-4 py-6 backdrop-blur-sm"
           onClick={() => setOpenModal(null)}
         >
           <div
-            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden"
+            className="w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-200"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-6 py-4 border-b">
-              <h3 className="text-xl font-bold text-blue-700">{current.title}</h3>
+            <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4 sm:px-6">
+              <h3 className="text-lg font-bold text-blue-700 sm:text-xl">
+                {current.title}
+              </h3>
               <button
-                className="text-gray-500 hover:text-gray-700 text-2xl leading-none"
+                className="rounded-md p-1 text-gray-500 transition hover:bg-gray-100 hover:text-gray-700"
                 onClick={() => setOpenModal(null)}
                 aria-label="Close"
               >
-                ×
+                <span className="text-2xl leading-none">×</span>
               </button>
             </div>
 
-            <div className="p-6 space-y-4">
+            <div className="space-y-4 p-4 sm:p-6">
               <img
                 src={current.img}
                 alt={current.alt}
-                className="w-full rounded-lg shadow-md"
+                className="w-full rounded-xl border border-gray-200 shadow-sm"
               />
-              <p className="text-gray-700">{current.text}</p>
+              <p className="leading-7 text-gray-700">{current.text}</p>
               <p className="text-sm text-gray-500">
-                Click outside the window to close.
+                Tap or click outside the window to close.
               </p>
             </div>
           </div>
         </div>
       )}
-      <Footer showDisclaimer/>
+
+      <Footer showDisclaimer />
     </div>
   );
 }
