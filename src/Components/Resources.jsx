@@ -1,95 +1,10 @@
 import { useState } from "react";
 import Hero from "./Hero";
 import Footer from "./Footer";
-
-function SectionHeader({ title, subtitle }) {
-  return (
-    <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
-      <h2 className="text-2xl font-bold text-blue-700 sm:text-3xl md:text-4xl">
-        {title}
-      </h2>
-      {subtitle && (
-        <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
-          {subtitle}
-        </p>
-      )}
-    </div>
-  );
-}
-
-function ResourceCard({
-  title,
-  description,
-  href,
-  buttonText = "Learn More",
-  accent = "blue",
-  external = false,
-  onClick,
-  isButton = false,
-}) {
-  const accentMap = {
-    blue: {
-      title: "text-blue-700",
-      button: "bg-blue-600 hover:bg-blue-700 focus:ring-blue-400",
-    },
-    green: {
-      title: "text-green-700",
-      button: "bg-green-600 hover:bg-green-700 focus:ring-green-400",
-    },
-    purple: {
-      title: "text-purple-700",
-      button: "bg-purple-600 hover:bg-purple-700 focus:ring-purple-400",
-    },
-  };
-
-  const styles = accentMap[accent] || accentMap.blue;
-
-  const baseCard =
-    "group h-full rounded-2xl bg-white p-6 sm:p-7 shadow-sm ring-1 ring-gray-200 transition duration-300 hover:-translate-y-1 hover:shadow-xl";
-
-  if (isButton) {
-    return (
-      <button
-        type="button"
-        onClick={onClick}
-        className={`${baseCard} w-full text-left focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2`}
-      >
-        <div className="flex h-full flex-col">
-          <div>
-            <h3 className={`mb-3 text-xl font-semibold ${styles.title}`}>{title}</h3>
-            <p className="min-h-[72px] leading-7 text-gray-600">{description}</p>
-          </div>
-
-          <span
-            className={`mt-6 inline-flex w-fit items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white transition ${styles.button}`}
-          >
-            View Chart
-          </span>
-        </div>
-      </button>
-    );
-  }
-
-  return (
-    <div className={baseCard}>
-      <div className="flex h-full flex-col">
-        <div>
-          <h3 className={`mb-3 text-xl font-semibold ${styles.title}`}>{title}</h3>
-          <p className="min-h-[72px] leading-7 text-gray-600">{description}</p>
-        </div>
-
-        <a
-          href={href}
-          target={external ? "_blank" : undefined}
-          rel={external ? "noopener noreferrer" : undefined}
-          className={`mt-6 inline-flex w-fit items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-offset-2 ${styles.button}`}
-        >
-          {buttonText}
-        </a>
-      </div>
-    </div>
-  );
-}
+import Section from "./Section";
+import SectionHeader from "./SectionHeader";
+import Card from "./Card";
+import ActionCard from "./ActionCard";
 
 function Resources() {
   const [openModal, setOpenModal] = useState(null);
@@ -122,88 +37,122 @@ function Resources() {
         textClass="text-white"
       />
 
-      <main className="mx-auto max-w-6xl space-y-16 px-4 py-12 sm:px-6 sm:py-16 sm:space-y-20">
-        <section id="equipment">
-          <SectionHeader
-            title="Medical Equipment"
-            subtitle="Explore options for finding equipment through free programs, low-cost local sources, or direct purchase."
-          />
-
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
-            <ResourceCard
-              title="Free"
-              description="Discover places and programs that offer medical equipment at no cost to caregivers and patients."
-              href="/equipment/free"
-              accent="blue"
+      <main>
+        <Section className="space-y-16 sm:space-y-20">
+          {/* Medical Equipment */}
+          <div id="equipment">
+            <SectionHeader
+              title="Medical Equipment"
+              subtitle="Explore options for finding equipment through free programs, low-cost local sources, or direct purchase."
             />
 
-            <ResourceCard
-              title="Thrift Stores"
-              description="Browse local thrift stores where affordable or gently used medical equipment may be available."
-              href="/equipment/thrift"
-              accent="green"
-            />
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
+              <ActionCard
+                title="Free"
+                description="Discover places and programs that offer medical equipment at no cost to caregivers and patients."
+                href="/equipment/free"
+                accent="blue"
+              />
 
-            <ResourceCard
-              title="For Purchase"
-              description="Explore additional equipment providers and services available for purchase to support ongoing care needs."
-              href="/equipment/purchase"
-              accent="purple"
-            />
+              <ActionCard
+                title="Thrift Stores"
+                description="Browse local thrift stores where affordable or gently used medical equipment may be available."
+                href="/equipment/thrift"
+                accent="green"
+              />
+
+              <ActionCard
+                title="For Purchase"
+                description="Explore additional tools, equipment, and services available for purchase to support ongoing care needs."
+                href="/equipment/purchase"
+                accent="purple"
+              />
+            </div>
           </div>
-        </section>
 
-        <section id="care">
-          <SectionHeader
-            title="Caregiving Support"
-            subtitle="Find practical caregiver tools and community connections that can help families feel more supported and less alone."
-          />
-
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            <ResourceCard
-              title="Caregivers"
-              description="Find caregiver resources, providers, and helpful networks that support daily care needs."
-              accent="blue"
-              isButton
-              onClick={() => setOpenModal("caregivers")}
+          {/* Caregiving Support */}
+          <div id="care">
+            <SectionHeader
+              title="Caregiving Support"
+              subtitle="Find practical caregiver tools and community connections that can help families feel more supported and less alone."
             />
 
-            <ResourceCard
-              title="Support Groups"
-              description="Explore support groups where caregivers can connect, share, and find encouragement."
-              accent="blue"
-              isButton
-              onClick={() => setOpenModal("support-groups")}
-            />
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+              <Card className="h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex h-full flex-col">
+                  <div>
+                    <h3 className="mb-3 text-xl font-semibold text-blue-700">
+                      Caregivers
+                    </h3>
+                    <p className="min-h-[72px] leading-7 text-gray-600">
+                      Find caregiver resources, providers, and helpful networks
+                      that support daily care needs.
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setOpenModal("caregivers")}
+                    className="mt-6 inline-flex w-fit items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                  >
+                    View Chart
+                  </button>
+                </div>
+              </Card>
+
+              <Card className="h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="flex h-full flex-col">
+                  <div>
+                    <h3 className="mb-3 text-xl font-semibold text-blue-700">
+                      Support Groups
+                    </h3>
+                    <p className="min-h-[72px] leading-7 text-gray-600">
+                      Explore support groups where caregivers can connect, share,
+                      and find encouragement.
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setOpenModal("support-groups")}
+                    className="mt-6 inline-flex w-fit items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                  >
+                    View Chart
+                  </button>
+                </div>
+              </Card>
+            </div>
           </div>
-        </section>
 
-        <section id="legal-help">
-          <SectionHeader
-            title="Legal Help"
-            subtitle="Learn about trusted legal professionals who may be able to help families navigating long-term care, estate, injury, or related concerns."
-          />
-
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            <ResourceCard
-              title="Kelly Sabo"
-              description="Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents."
-              href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/"
-              accent="blue"
-              external
+          {/* Legal Help */}
+          <div id="legal-help">
+            <SectionHeader
+              title="Legal Help"
+              subtitle="Learn about trusted legal professionals who may be able to help families navigating long-term care, estate, injury, or related concerns."
             />
 
-            <ResourceCard
-              title="Frank Ryan"
-              description="Frank Ryan is an experienced attorney with decades of practice across real estate, family matters, probate and estates, personal injury, civil litigation, and more."
-              href="https://www.attorneyfrankryan.com/"
-              accent="blue"
-              external
-            />
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+              <ActionCard
+                title="Kelly Sabo"
+                description="Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents."
+                href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/"
+                accent="blue"
+                external
+              />
+
+              <ActionCard
+                title="Frank Ryan"
+                description="Frank Ryan is an experienced attorney with decades of practice across real estate, family matters, probate and estates, personal injury, civil litigation, and more."
+                href="https://www.attorneyfrankryan.com/"
+                accent="blue"
+                external
+              />
+            </div>
           </div>
-        </section>
+        </Section>
       </main>
 
+      {/* Modal */}
       {current && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/70 px-4 py-6 backdrop-blur-sm"
