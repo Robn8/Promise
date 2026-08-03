@@ -71,19 +71,29 @@ function Nav() {
       <div className="mx-auto grid max-w-7xl grid-cols-3 items-center px-4 py-4 md:flex md:justify-between md:px-6">
         {/* LEFT: Logo */}
         <div className="flex items-center justify-start">
-          <NavLink to="/" className="group flex shrink-0 items-center">
-            <div className="relative flex h-16 w-16 items-center justify-center sm:h-20 sm:w-20 md:h-24 md:w-24">
+          <NavLink
+            to="/"
+            className="group flex shrink-0 items-center"
+            aria-label="Go to Promise2Papa homepage"
+          >
+            <div className="relative flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28 md:h-32 md:w-32">
+              {/* Soft gradient glow */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-blue-400/30 via-indigo-400/25 to-purple-500/30 opacity-70 blur-xl transition duration-300 group-hover:scale-110 group-hover:opacity-100" />
+
+              {/* Heart background */}
               <svg
                 viewBox="0 0 24 24"
-                className="absolute inset-0 h-full w-full fill-blue-600/15 stroke-blue-500 stroke-[1.5] transition group-hover:fill-blue-600/25"
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full fill-blue-600/15 stroke-indigo-500 stroke-[1.6] drop-shadow-sm transition duration-300 group-hover:scale-105 group-hover:fill-indigo-500/25 group-hover:stroke-purple-500"
               >
                 <path d="M12 21s-6.716-4.35-9.428-7.062C.46 11.826.333 8.98 2.343 6.97c2.01-2.01 4.856-1.883 6.968.23L12 9.889l2.689-2.689c2.112-2.112 4.958-2.24 6.968-.23 2.01 2.01 1.883 4.856-.23 6.968C18.716 16.65 12 21 12 21z" />
               </svg>
 
+              {/* Logo image */}
               <img
                 src="/hand1.jpg"
                 alt="Promise2Papa Logo"
-                className="relative z-10 mt-2 h-8 w-8 rounded-full bg-white object-cover shadow-sm transition-transform duration-300 ease-out group-hover:scale-110 group-hover:shadow-md sm:mt-3 sm:h-10 sm:w-10 md:h-10 md:w-10"
+                className="relative z-10 mt-2 h-11 w-11 rounded-full object-cover shadow-lg ring-4 ring-white transition duration-300 ease-out group-hover:scale-110 group-hover:shadow-xl sm:mt-3 sm:h-14 sm:w-14 md:h-16 md:w-16"
               />
             </div>
           </NavLink>
