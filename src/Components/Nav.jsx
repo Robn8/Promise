@@ -108,7 +108,7 @@ function Nav() {
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center md:hidden"
           aria-label="Go to Promise2Papa homepage"
         >
-          <div className="whitespace-nowrap bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-xl font-bold tracking-tight text-transparent sm:text-3xl">
+          <div className="ml-10 whitespace-nowrap bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-xl font-bold tracking-tight text-transparent sm:text-3xl">
             Promise2Papa
           </div>
         </NavLink>

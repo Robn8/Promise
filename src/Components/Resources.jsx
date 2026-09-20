@@ -135,7 +135,7 @@ function Resources() {
               <ActionCard
                 title="Kelly Sabo"
                 description="Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents."
-                href="https://www.levinperconti.com/attorneys/kelly-sabo-gaden/"
+                href="https://www.ksg-law.com"
                 accent="blue"
                 external
               />
