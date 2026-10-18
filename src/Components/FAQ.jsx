@@ -34,52 +34,56 @@ function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Hero section (full-width) */}
+    <div className="flex min-h-screen flex-col bg-brand-cream">
+      {/* Hero Section */}
       <Hero
         title="Frequently Asked Questions"
         subtitle="Find answers to the most common inquiries from our community."
-        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
+        bgClass="bg-gradient-to-br from-brand-sage via-brand-primary to-brand-olive"
         textClass="text-white"
       />
 
       <main className="flex-1">
-      {/* FAQ Content */}
-      <section className="max-w-4xl mx-auto px-4 py-16">
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white border rounded-lg shadow-md overflow-hidden"
-            >
-              <button
-                className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
-                onClick={() => toggle(index)}
-              >
-                <span className="text-lg font-medium text-gray-800">
-                  {faq.question}
-                </span>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-500" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500" />
-                )}
-              </button>
-
-              {/* Animated answer area */}
+        {/* FAQ Content */}
+        <section className="mx-auto max-w-4xl px-4 py-16">
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
               <div
-                className={`px-6 pb-4 text-gray-600 text-sm transition-all duration-300 ${
-                  openIndex === index ? "block" : "hidden"
-                }`}
+                key={index}
+                className="overflow-hidden rounded-xl border border-brand-sage/30 bg-white shadow-md transition duration-300 hover:shadow-lg"
               >
-                {faq.answer}
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between px-6 py-4 text-left transition hover:bg-brand-cream/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-primary"
+                  onClick={() => toggle(index)}
+                  aria-expanded={openIndex === index}
+                >
+                  <span className="text-lg font-medium text-brand-olive">
+                    {faq.question}
+                  </span>
+
+                  {openIndex === index ? (
+                    <ChevronUp className="h-5 w-5 shrink-0 text-brand-primary" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 shrink-0 text-brand-primary" />
+                  )}
+                </button>
+
+                {/* Animated answer area */}
+                <div
+                  className={`px-6 pb-4 text-sm leading-7 text-gray-600 transition-all duration-300 ${
+                    openIndex === index ? "block" : "hidden"
+                  }`}
+                >
+                  {faq.answer}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
       </main>
-      <Footer showDisclaimer/>
+
+      <Footer showDisclaimer />
     </div>
   );
 }

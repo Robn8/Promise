@@ -5,11 +5,11 @@ import Card from "./Card";
 
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-brand-cream">
       <Hero
         title="Promise 2 Papa"
         subtitle="A Ministry of Love Born from Loss"
-        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
+        bgClass="bg-gradient-to-br from-brand-sage via-brand-primary to-brand-olive"
         textClass="text-white"
       />
 
@@ -18,23 +18,23 @@ function AboutUs() {
           <Card className="overflow-hidden rounded-3xl animate-fade-up-soft">
             <div className="flex justify-center pt-6 sm:pt-8">
               <div className="relative">
-                <div className="absolute inset-0 scale-110 rounded-full bg-gradient-to-br from-blue-200 via-indigo-200 to-purple-200 opacity-40 blur-2xl" />
+                <div className="absolute inset-0 scale-110 rounded-full bg-gradient-to-br from-brand-sage via-brand-primary to-brand-olive opacity-30 blur-2xl" />
                 <img
                   src="/fam.jpg"
                   alt="Promise 2 Papa family story"
-                  className="relative h-48 w-48 rounded-full object-cover object-[center_top] shadow-xl ring-4 ring-white sm:h-60 sm:w-60"
+                  className="relative h-48 w-48 rounded-full object-cover object-[center_top] shadow-xl ring-4 ring-brand-cream sm:h-60 sm:w-60"
                 />
               </div>
             </div>
 
             <div className="animate-fade-up-soft-delay px-6 pb-6 pt-8 sm:px-8 sm:pb-8 lg:px-10 lg:pb-10">
-              <p className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+              <p className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.2em] text-brand-primary">
                 Our Story
               </p>
 
               <div className="mx-auto mb-8 max-w-3xl">
-                <blockquote className="relative border-l-4 border-blue-400 pl-5 text-xl font-semibold italic leading-relaxed text-blue-600 sm:text-2xl">
-                  <span className="absolute -left-3 -top-3 text-5xl leading-none text-blue-200">
+                <blockquote className="relative border-l-4 border-brand-sage pl-5 text-xl font-semibold italic leading-relaxed text-brand-olive sm:text-2xl">
+                  <span className="absolute -left-3 -top-3 text-5xl leading-none text-brand-sage/50">
                     “
                   </span>
                   Happy Sunday morning, let’s hope it&apos;s a peaceful day. ❤️❤️
@@ -84,9 +84,13 @@ function AboutUs() {
             </div>
           </Card>
 
+          {/* Why We Exist Section */}
           <div className="mt-12 sm:mt-16">
-            <div className="animate-fade-up-soft rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 px-6 py-8 text-white shadow-lg sm:px-8 sm:py-10">
-              <h2 className="text-2xl font-bold sm:text-3xl">Why We Exist</h2>
+            <div className="animate-fade-up-soft rounded-2xl bg-gradient-to-r from-brand-sage via-brand-primary to-brand-olive px-6 py-8 text-white shadow-lg sm:px-8 sm:py-10">
+              <h2 className="text-2xl font-bold sm:text-3xl">
+                Why We Exist
+              </h2>
+
               <p className="mt-4 max-w-3xl text-sm leading-7 text-white/90 sm:text-base">
                 Promise 2 Papa exists to help families facing caregiving decisions
                 feel less overwhelmed and more supported. Through shared

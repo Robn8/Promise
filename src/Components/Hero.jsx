@@ -4,7 +4,7 @@ import clsx from "clsx";
 function Hero({
   title,
   subtitle,
-  bgClass = "bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700",
+  bgClass = "bg-gradient-to-br from-brand-sage via-brand-primary to-brand-olive",
   textClass = "text-white",
   children,
 }) {
@@ -18,9 +18,9 @@ function Hero({
     >
       {/* Animated gradient blobs */}
       <div className="absolute inset-0">
-        <div className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-blob" />
-        <div className="absolute top-10 right-0 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-blue-200/10 blur-3xl animate-blob animation-delay-4000" />
+        <div className="absolute -top-24 -left-20 h-72 w-72 rounded-full bg-brand-cream/15 blur-3xl animate-blob" />
+        <div className="absolute top-10 right-0 h-72 w-72 rounded-full bg-brand-sage/25 blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand-forest/10 blur-3xl animate-blob animation-delay-4000" />
       </div>
 
       {/* Slight overlay for readability */}
@@ -28,8 +28,7 @@ function Hero({
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl">
-        <div className="rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg px-6 py-10 sm:px-10 animate-hero-fade-up">
-          
+        <div className="animate-hero-fade-up rounded-2xl border border-white/20 bg-white/10 px-6 py-10 shadow-lg backdrop-blur-lg sm:px-10">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {title}
           </h1>
@@ -44,12 +43,12 @@ function Hero({
         </div>
       </div>
 
-      {/* Bottom wave divider (matches bg-gray-50) */}
+      {/* Bottom wave divider */}
       <div className="absolute bottom-0 left-0 w-full leading-none">
         <svg
           viewBox="0 0 1440 120"
           preserveAspectRatio="none"
-          className="h-16 w-full md:h-24 text-gray-50"
+          className="h-16 w-full text-brand-cream md:h-24"
         >
           <path
             className="fill-current"

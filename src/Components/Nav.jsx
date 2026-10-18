@@ -46,10 +46,10 @@ function Nav() {
   };
 
   const linkBase =
-    "rounded-md px-3 py-2 transition duration-200 hover:bg-blue-50 hover:text-blue-500";
+    "rounded-md px-3 py-2 transition duration-200 hover:bg-brand-sage/20 hover:text-brand-primary";
 
   const desktopDropdownClass = (open) =>
-    `absolute left-0 top-full z-50 mt-2 w-48 origin-top overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg ring-1 ring-black/5 transition-all duration-200 ease-out ${
+    `absolute left-0 top-full z-50 mt-2 w-48 origin-top overflow-hidden rounded-xl border border-brand-sage/35 bg-brand-cream shadow-lg ring-1 ring-black/5 transition-all duration-200 ease-out ${
       open
         ? "visible translate-y-0 scale-100 opacity-100"
         : "invisible pointer-events-none -translate-y-2 scale-95 opacity-0"
@@ -66,8 +66,8 @@ function Nav() {
     <div
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "border-b border-blue-100 bg-white/95 shadow-md backdrop-blur-lg"
-          : "border-b border-blue-100 bg-white/85 backdrop-blur-md"
+          ? "border-b border-brand-sage/35 bg-brand-cream/95 shadow-md backdrop-blur-lg"
+          : "border-b border-brand-sage/35 bg-brand-cream/85 backdrop-blur-md"
       }`}
     >
       {/* NAV BAR */}
@@ -81,13 +81,13 @@ function Nav() {
           >
             <div className="relative flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28 md:h-32 md:w-32">
               {/* Soft gradient glow */}
-              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-blue-400/30 via-indigo-400/25 to-purple-500/30 opacity-70 blur-xl transition duration-300 group-hover:scale-110 group-hover:opacity-100" />
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-brand-sage/40 via-brand-primary/25 to-brand-olive/30 opacity-70 blur-xl transition duration-300 group-hover:scale-110 group-hover:opacity-100" />
 
               {/* Heart background */}
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-110 fill-blue-600/15 stroke-indigo-500 stroke-[1.6] drop-shadow-sm transition duration-300 group-hover:scale-125 group-hover:fill-indigo-500/25 group-hover:stroke-purple-500"
+                className="absolute inset-0 h-full w-full scale-110 fill-brand-sage/20 stroke-brand-primary stroke-[1.6] drop-shadow-sm transition duration-300 group-hover:scale-125 group-hover:fill-brand-sage/35 group-hover:stroke-brand-olive"
               >
                 <path d="M12 21s-6.716-4.35-9.428-7.062C.46 11.826.333 8.98 2.343 6.97c2.01-2.01 4.856-1.883 6.968.23L12 9.889l2.689-2.689c2.112-2.112 4.958-2.24 6.968-.23 2.01 2.01 1.883 4.856-.23 6.968C18.716 16.65 12 21 12 21z" />
               </svg>
@@ -96,7 +96,7 @@ function Nav() {
               <img
                 src="/hand1.jpg"
                 alt="Promise2Papa Logo"
-                className="relative z-10 mt-2 h-11 w-11 rounded-full object-cover shadow-lg ring-4 ring-white transition duration-300 ease-out group-hover:scale-110 group-hover:shadow-xl sm:mt-3 sm:h-14 sm:w-14 md:h-16 md:w-16"
+                className="relative z-10 mt-2 h-11 w-11 rounded-full object-cover shadow-lg ring-4 ring-brand-cream transition duration-300 ease-out group-hover:scale-110 group-hover:shadow-xl sm:mt-3 sm:h-14 sm:w-14 md:h-16 md:w-16"
               />
             </div>
           </NavLink>
@@ -108,7 +108,7 @@ function Nav() {
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center md:hidden"
           aria-label="Go to Promise2Papa homepage"
         >
-          <div className="ml-10 whitespace-nowrap bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-xl font-bold tracking-tight text-transparent sm:text-3xl">
+          <div className=" whitespace-nowrap bg-gradient-to-r from-brand-primary via-brand-olive to-brand-forest bg-clip-text text-xl font-bold tracking-tight text-transparent sm:text-3xl">
             Promise2Papa
           </div>
         </NavLink>
@@ -116,11 +116,11 @@ function Nav() {
         {/* CENTER: Desktop title */}
         <div className="hidden flex-1 justify-center md:flex">
           <NavLink to="/" className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-4xl font-bold tracking-tight text-transparent">
+            <div className="bg-gradient-to-r from-brand-primary via-brand-olive to-brand-forest bg-clip-text text-4xl font-bold tracking-tight text-transparent">
               Promise2Papa
             </div>
 
-            <div className="mt-1 text-sm text-gray-500">
+            <div className="mt-1 text-sm text-brand-olive">
               You are not alone on your caregiving journey
             </div>
           </NavLink>
@@ -142,8 +142,8 @@ function Nav() {
                     className={({ isActive }) =>
                       `flex items-center gap-1 ${linkBase} ${
                         isActive
-                          ? "font-semibold text-blue-600"
-                          : "text-gray-700"
+                          ? "font-semibold text-brand-primary"
+                          : "text-brand-olive"
                       }`
                     }
                   >
@@ -161,7 +161,7 @@ function Nav() {
                       <NavLink
                         key={sublink.path}
                         to={sublink.path}
-                        className="block px-4 py-2.5 text-sm text-gray-600 transition hover:bg-blue-50 hover:text-blue-600"
+                        className="block px-4 py-2.5 text-sm text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                       >
                         {sublink.name}
                       </NavLink>
@@ -184,8 +184,8 @@ function Nav() {
                     className={({ isActive }) =>
                       `flex items-center gap-1 ${linkBase} ${
                         isActive
-                          ? "font-semibold text-blue-600"
-                          : "text-gray-700"
+                          ? "font-semibold text-brand-primary"
+                          : "text-brand-olive"
                       }`
                     }
                   >
@@ -203,7 +203,7 @@ function Nav() {
                       <NavLink
                         key={sublink.path}
                         to={sublink.path}
-                        className="block px-4 py-2.5 text-sm text-gray-600 transition hover:bg-blue-50 hover:text-blue-600"
+                        className="block px-4 py-2.5 text-sm text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                       >
                         {sublink.name}
                       </NavLink>
@@ -220,8 +220,8 @@ function Nav() {
                 className={({ isActive }) =>
                   `${linkBase} ${
                     isActive
-                      ? "font-semibold text-blue-600"
-                      : "text-gray-700"
+                      ? "font-semibold text-brand-primary"
+                      : "text-brand-olive"
                   }`
                 }
               >
@@ -235,7 +235,7 @@ function Nav() {
         <div className="flex justify-end md:hidden">
           <button
             type="button"
-            className="rounded-md p-2 transition hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+            className="rounded-md p-2 transition hover:bg-brand-sage/20 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2"
             onClick={() => setMobileOpen((prev) => !prev)}
             aria-label="Toggle navigation menu"
             aria-expanded={mobileOpen}
@@ -249,7 +249,7 @@ function Nav() {
       {/* MOBILE MENU */}
       <div
         id="mobile-navigation"
-        className={`overflow-hidden border-t border-blue-100 bg-white/95 backdrop-blur-md transition-all duration-300 ease-in-out md:hidden ${
+        className={`overflow-hidden border-t border-brand-sage/35 bg-brand-cream/95 backdrop-blur-md transition-all duration-300 ease-in-out md:hidden ${
           mobileOpen
             ? "max-h-[700px] opacity-100"
             : "max-h-0 border-t-transparent opacity-0"
@@ -262,7 +262,7 @@ function Nav() {
                 <div key={link.path}>
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between rounded-md px-2 py-3 font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
+                    className="flex w-full items-center justify-between rounded-md px-2 py-3 font-medium text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                     onClick={() =>
                       setMobileResourcesOpen((prev) => !prev)
                     }
@@ -282,7 +282,7 @@ function Nav() {
                       <NavLink
                         to="/resources"
                         onClick={closeMobileMenu}
-                        className="block rounded-md px-2 py-2 text-gray-600 transition hover:bg-blue-50 hover:text-blue-600"
+                        className="block rounded-md px-2 py-2 text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                       >
                         Helpful Resources
                       </NavLink>
@@ -292,7 +292,7 @@ function Nav() {
                           key={sublink.path}
                           to={sublink.path}
                           onClick={closeMobileMenu}
-                          className="block rounded-md px-2 py-2 text-gray-600 transition hover:bg-blue-50 hover:text-blue-600"
+                          className="block rounded-md px-2 py-2 text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                         >
                           {sublink.name}
                         </NavLink>
@@ -308,7 +308,7 @@ function Nav() {
                 <div key={link.path}>
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between rounded-md px-2 py-3 font-medium text-gray-700 transition hover:bg-blue-50 hover:text-blue-600"
+                    className="flex w-full items-center justify-between rounded-md px-2 py-3 font-medium text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                     onClick={() => setMobileContactOpen((prev) => !prev)}
                     aria-expanded={mobileContactOpen}
                   >
@@ -328,7 +328,7 @@ function Nav() {
                           key={sublink.path}
                           to={sublink.path}
                           onClick={closeMobileMenu}
-                          className="block rounded-md px-2 py-2 text-gray-600 transition hover:bg-blue-50 hover:text-blue-600"
+                          className="block rounded-md px-2 py-2 text-brand-olive transition hover:bg-brand-sage/20 hover:text-brand-primary"
                         >
                           {sublink.name}
                         </NavLink>
@@ -345,10 +345,10 @@ function Nav() {
                 to={link.path}
                 onClick={closeMobileMenu}
                 className={({ isActive }) =>
-                  `block rounded-md px-2 py-3 transition hover:bg-blue-50 hover:text-blue-600 ${
+                  `block rounded-md px-2 py-3 transition hover:bg-brand-sage/20 hover:text-brand-primary ${
                     isActive
-                      ? "font-semibold text-blue-600"
-                      : "text-gray-700"
+                      ? "font-semibold text-brand-primary"
+                      : "text-brand-olive"
                   }`
                 }
               >

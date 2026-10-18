@@ -2,54 +2,55 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Hero from "./Hero";
 
-function EquipmentTemplate({ 
-  heroTitle, 
-  heroSubtitle, 
-  chartSrc, 
-  chartAlt, 
-  description 
+function EquipmentTemplate({
+  heroTitle,
+  heroSubtitle,
+  chartSrc,
+  chartAlt,
+  description,
 }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-brand-cream">
       {/* Hero Section */}
       <Hero
         title={heroTitle}
         subtitle={heroSubtitle}
-        bgClass="bg-blue-600"
+        bgClass="bg-gradient-to-br from-brand-sage via-brand-primary to-brand-olive"
         textClass="text-white"
       />
 
       {/* Back Button */}
-      <div className="max-w-5xl mx-auto px-4 mt-6">
+      <div className="mx-auto mt-6 max-w-5xl px-4">
         <NavLink
           to="/resources"
-          className="inline-block px-4 py-2 rounded-full bg-blue-600 text-white font-medium shadow hover:bg-blue-700 transition"
+          className="inline-block rounded-full bg-brand-primary px-4 py-2 font-medium text-white shadow transition hover:bg-brand-olive"
         >
           ← Back to Resources
         </NavLink>
       </div>
 
       {/* Content Section - Side by Side */}
-      <section className="max-w-5xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-10">
+      <section className="mx-auto flex max-w-5xl flex-col items-center gap-10 px-4 py-16 md:flex-row">
         {/* Chart with click-to-enlarge */}
         <div
-          className="relative cursor-pointer animate-fadeIn w-full md:w-1/2"
+          className="animate-fadeIn relative w-full cursor-pointer md:w-1/2"
           onClick={() => setShowModal(true)}
         >
           <img
             src={chartSrc}
             alt={chartAlt}
-            className="rounded-lg shadow-xl w-full hover:opacity-90 transition"
+            className="w-full rounded-lg shadow-xl transition hover:opacity-90"
           />
-          <p className="text-sm text-gray-500 mt-2 text-center md:text-left">
+
+          <p className="mt-2 text-center text-sm text-brand-olive/70 md:text-left">
             Click chart to enlarge
           </p>
         </div>
 
         {/* Description */}
-        <div className="w-full md:w-1/2 text-lg text-gray-700 leading-relaxed animate-fadeIn delay-200">
+        <div className="animate-fadeIn delay-200 w-full text-lg leading-relaxed text-gray-700 md:w-1/2">
           <p>{description}</p>
         </div>
       </section>
@@ -57,13 +58,13 @@ function EquipmentTemplate({
       {/* Lightbox Modal */}
       {showModal && (
         <div
-          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
           onClick={() => setShowModal(false)}
         >
           <img
             src={chartSrc}
             alt={`${chartAlt} Enlarged`}
-            className="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl"
+            className="max-h-[90%] max-w-[90%] rounded-lg shadow-2xl"
           />
         </div>
       )}
