@@ -78,11 +78,33 @@ function Donations() {
 
               <div className="mt-6">
                 <a
-                  href="/contact"
+                  href="https://app.autobooks.co/pay/promise2papa"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-xl bg-brand-cream px-6 py-3 font-semibold text-brand-olive shadow-md transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-brand-primary"
                 >
-                  Contact Us About Giving
+                  Make a Donation
                 </a>
+              </div>
+
+              {/* QR Code */}
+              <div className="mt-8 flex flex-col items-center">
+                <a
+                  href="https://app.autobooks.co/pay/promise2papa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    src="/autobooks-qr.png"
+                    alt="QR code for Promise 2 Papa donations"
+                    className="h-40 w-40 rounded-xl bg-white p-2 shadow-md sm:h-48 sm:w-48"
+                  />
+                </a>
+
+                <p className="mt-3 text-sm text-white/90">
+                  Scan to donate with your phone
+                </p>
               </div>
             </div>
           </div>
