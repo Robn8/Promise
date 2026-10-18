@@ -1,32 +1,37 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* Optional animation in your CSS (or add via Tailwind plugins) */
+/* Promise2Papa Brand Colors */
+@theme {
+  --color-brand-primary: #62725B;
+  --color-brand-sage: #95A68C;
+  --color-brand-olive: #4E5948;
+  --color-brand-cream: #F5F1E9;
+  --color-brand-forest: #233C00;
+}
+
+/* Fade In Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  .animate-fadeIn {
-    animation: fadeIn 1s ease-out forwards;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
 
 @layer utilities {
   .animate-fadeIn {
     animation: fadeIn 0.8s ease-in-out forwards;
   }
+
   .delay-200 {
     animation-delay: 0.2s;
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
+/* Blob Animation */
 @keyframes blob {
   0%,
   100% {
@@ -52,6 +57,7 @@
   animation-delay: 4s;
 }
 
+/* Hero Fade Up Animation */
 @keyframes heroFadeUp {
   from {
     opacity: 0;
@@ -67,6 +73,7 @@
   animation: heroFadeUp 0.8s ease-out forwards;
 }
 
+/* Soft Fade Up Animation */
 @keyframes fadeUpSoft {
   from {
     opacity: 0;

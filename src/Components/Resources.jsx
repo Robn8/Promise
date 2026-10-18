@@ -29,11 +29,11 @@ function Resources() {
   const current = openModal ? modalContent[openModal] : null;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-brand-cream">
       <Hero
         title="Helpful Resources"
         subtitle="Equipment, caregiver services, legal guidance, and support for every step of the journey."
-        bgClass="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"
+        bgClass="bg-gradient-to-br from-brand-sage via-brand-primary to-brand-olive"
         textClass="text-white"
       />
 
@@ -51,21 +51,21 @@ function Resources() {
                 title="Free"
                 description="Discover places and programs that offer medical equipment at no cost to caregivers and patients."
                 href="/equipment/free"
-                accent="blue"
+                accent="primary"
               />
 
               <ActionCard
                 title="Thrift Stores"
                 description="Browse local thrift stores where affordable or gently used medical equipment may be available."
                 href="/equipment/thrift"
-                accent="green"
+                accent="primary"
               />
 
               <ActionCard
                 title="For Purchase"
                 description="Explore additional tools, equipment, and services available for purchase to support ongoing care needs."
                 href="/equipment/purchase"
-                accent="purple"
+                accent="primary"
               />
             </div>
           </div>
@@ -81,9 +81,10 @@ function Resources() {
               <Card className="h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex h-full flex-col">
                   <div>
-                    <h3 className="mb-3 text-xl font-semibold text-blue-700">
+                    <h3 className="mb-3 text-xl font-semibold text-brand-olive">
                       Caregivers
                     </h3>
+
                     <p className="min-h-[72px] leading-7 text-gray-600">
                       Find caregiver resources, providers, and helpful networks
                       that support daily care needs.
@@ -93,7 +94,7 @@ function Resources() {
                   <button
                     type="button"
                     onClick={() => setOpenModal("caregivers")}
-                    className="mt-6 inline-flex w-fit items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                    className="mt-6 inline-flex w-fit items-center justify-center rounded-lg bg-brand-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-brand-olive focus:outline-none focus:ring-2 focus:ring-brand-sage focus:ring-offset-2"
                   >
                     View Chart
                   </button>
@@ -103,9 +104,10 @@ function Resources() {
               <Card className="h-full transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                 <div className="flex h-full flex-col">
                   <div>
-                    <h3 className="mb-3 text-xl font-semibold text-blue-700">
+                    <h3 className="mb-3 text-xl font-semibold text-brand-olive">
                       Support Groups
                     </h3>
+
                     <p className="min-h-[72px] leading-7 text-gray-600">
                       Explore support groups where caregivers can connect, share,
                       and find encouragement.
@@ -115,7 +117,7 @@ function Resources() {
                   <button
                     type="button"
                     onClick={() => setOpenModal("support-groups")}
-                    className="mt-6 inline-flex w-fit items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                    className="mt-6 inline-flex w-fit items-center justify-center rounded-lg bg-brand-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-brand-olive focus:outline-none focus:ring-2 focus:ring-brand-sage focus:ring-offset-2"
                   >
                     View Chart
                   </button>
@@ -136,16 +138,17 @@ function Resources() {
                 title="Kelly Sabo"
                 description="Kelly Sabo Gaden is a dedicated advocate for individuals and families affected by long-term care abuse, medical malpractice, birth injuries, and serious accidents."
                 href="https://www.ksg-law.com"
-                accent="blue"
+                accent="primary"
                 external
               />
 
               <ActionCard
                 title="Frank Ryan"
                 description="Frank Ryan is an experienced attorney with decades of practice across real estate, family matters, probate and estates, personal injury, civil litigation, and more."
-                href="https://www.attorneyfrankryan.com/"
-                accent="blue"
-                external
+                href="tel:+17086339600"
+                buttonText="Call Frank Ryan"
+                accent="primary"
+                
               />
             </div>
           </div>
@@ -159,15 +162,17 @@ function Resources() {
           onClick={() => setOpenModal(null)}
         >
           <div
-            className="w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-200"
+            className="w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-brand-sage/30"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between border-b border-gray-200 px-4 py-4 sm:px-6">
-              <h3 className="text-lg font-bold text-blue-700 sm:text-xl">
+            <div className="flex items-center justify-between border-b border-brand-sage/30 px-4 py-4 sm:px-6">
+              <h3 className="text-lg font-bold text-brand-olive sm:text-xl">
                 {current.title}
               </h3>
+
               <button
-                className="rounded-md p-1 text-gray-500 transition hover:bg-gray-100 hover:text-gray-700"
+                type="button"
+                className="rounded-md p-1 text-brand-olive transition hover:bg-brand-cream hover:text-brand-forest"
                 onClick={() => setOpenModal(null)}
                 aria-label="Close"
               >
@@ -179,10 +184,14 @@ function Resources() {
               <img
                 src={current.img}
                 alt={current.alt}
-                className="w-full rounded-xl border border-gray-200 shadow-sm"
+                className="w-full rounded-xl border border-brand-sage/30 shadow-sm"
               />
-              <p className="leading-7 text-gray-700">{current.text}</p>
-              <p className="text-sm text-gray-500">
+
+              <p className="leading-7 text-gray-700">
+                {current.text}
+              </p>
+
+              <p className="text-sm text-brand-olive/70">
                 Tap or click outside the window to close.
               </p>
             </div>

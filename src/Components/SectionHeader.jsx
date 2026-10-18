@@ -1,16 +1,17 @@
 function SectionHeader({ title, subtitle }) {
-    return (
-      <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-700">
-          {title}
-        </h2>
-        {subtitle && (
-          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-7">
-            {subtitle}
-          </p>
-        )}
-      </div>
-    );
-  }
-  
-  export default SectionHeader;
+  return (
+    <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
+      <h2 className="text-2xl font-bold text-brand-olive sm:text-3xl md:text-4xl">
+        {title}
+      </h2>
+
+      {subtitle && (
+        <p className="mt-3 text-sm leading-7 text-brand-olive/80 sm:text-base">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default SectionHeader;
