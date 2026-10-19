@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Hero from "./Hero";
@@ -69,14 +70,26 @@ function FAQ() {
                   )}
                 </button>
 
-                {/* Animated answer area */}
-                <div
-                  className={`px-6 pb-4 text-sm leading-7 text-gray-600 transition-all duration-300 ${
-                    openIndex === index ? "block" : "hidden"
-                  }`}
-                >
-                  {faq.answer}
-                </div>
+                
+              {/* Animated answer area */}
+              <div
+                className={`px-6 pb-4 text-sm leading-7 text-gray-600 transition-all duration-300 ${
+                  openIndex === index ? "block" : "hidden"
+                }`}
+              >
+                <p>{faq.answer}</p>
+
+                {/* Donation Link - Last FAQ Only */}
+                {index === faqs.length - 1 && (
+                  <NavLink
+                    to="/donations"
+                    className="mt-4 inline-flex items-center rounded-lg bg-brand-primary px-4 py-2.5 font-medium text-white shadow-sm transition hover:bg-brand-olive focus:outline-none focus:ring-2 focus:ring-brand-sage focus:ring-offset-2"
+                  >
+                    Learn More About Donating →
+                  </NavLink>
+                )}
+              </div>
+
               </div>
             ))}
           </div>
