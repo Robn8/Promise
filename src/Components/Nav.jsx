@@ -79,24 +79,17 @@ function Nav() {
             className="group flex shrink-0 items-center"
             aria-label="Go to Promise2Papa homepage"
           >
-            <div className="relative flex h-24 w-24 items-center justify-center sm:h-28 sm:w-28 md:h-32 md:w-32">
-              {/* Soft gradient glow */}
-              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-brand-sage/40 via-brand-primary/25 to-brand-olive/30 opacity-70 blur-xl transition duration-300 group-hover:scale-110 group-hover:opacity-100" />
-
-              {/* Heart background */}
-              <svg
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full scale-110 fill-brand-sage/20 stroke-brand-primary stroke-[1.6] drop-shadow-sm transition duration-300 group-hover:scale-125 group-hover:fill-brand-sage/35 group-hover:stroke-brand-olive"
-              >
-                <path d="M12 21s-6.716-4.35-9.428-7.062C.46 11.826.333 8.98 2.343 6.97c2.01-2.01 4.856-1.883 6.968.23L12 9.889l2.689-2.689c2.112-2.112 4.958-2.24 6.968-.23 2.01 2.01 1.883 4.856-.23 6.968C18.716 16.65 12 21 12 21z" />
-              </svg>
-
-              {/* Logo image */}
+            <div className="relative h-20 w-28 overflow-hidden rounded-[45%] sm:h-24 sm:w-32 md:h-28 md:w-36">
               <img
-                src="/hand1.jpg"
-                alt="Promise2Papa Logo"
-                className="relative z-10 mt-2 h-11 w-11 rounded-full object-cover shadow-lg ring-4 ring-brand-cream transition duration-300 ease-out group-hover:scale-110 group-hover:shadow-xl sm:mt-3 sm:h-14 sm:w-14 md:h-16 md:w-16"
+                src="/newhands1.png"
+                alt="Promise 2 Papa Logo"
+                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                style={{
+                  maskImage:
+                    "radial-gradient(ellipse, black 48%, transparent 75%)",
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse, black 48%, transparent 75%)",
+                }}
               />
             </div>
           </NavLink>
